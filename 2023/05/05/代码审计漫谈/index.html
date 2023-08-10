@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ch" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>代码审计漫谈 | Hexo</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":true,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - 共 $1 行","copy":"复制","copyFinish":"复制成功","expand":"展开"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/brands.min.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/fontawesome.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+<!DOCTYPE html><html lang="ch" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>代码审计漫谈 | Hexo</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":true,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy","copyFinish":"copied","expand":"expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/brands.min.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/fontawesome.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
 if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
  font-family: BenderLight;
  src: local('Bender'), url("/font/BenderLight.ttf");
@@ -17,30 +17,23 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
   --light-background: url('/img/bk.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn hide"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>代码审计漫谈</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-05-05T10:30:49.000Z" id="date"> 2023-05-05</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2023-05-05T13:21:07.544Z" id="updated"> 2023-05-05</time></div></span></div></div><hr><div id="post-content"><h1>前言</h1>
-<p>因为自己想做一个代码审计工具，自己之前是有做过一点点代码审计的。审计过熊海，bluecms等等简单的一些cms。但是对其中的很多深层次原理都不了解。甚至可以说一点点都不懂，毕竟从用一个工具到做一个工具就是有本质上的区别。</p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn hide"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>代码审计漫谈</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2023-05-05T10:30:49.000Z" id="date"> 2023-05-05</time></div></span><br><span>Last Update: <div class="control"><time datetime="2023-05-05T13:21:07.544Z" id="updated"> 2023-05-05</time></div></span></div></div><hr><div id="post-content"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因为自己想做一个代码审计工具，自己之前是有做过一点点代码审计的。审计过熊海，bluecms等等简单的一些cms。但是对其中的很多深层次原理都不了解。甚至可以说一点点都不懂，毕竟从用一个工具到做一个工具就是有本质上的区别。</p>
 <p>于我而言，做一个工具肯定是有很大的提升的。对于这个工具的构想，其实目标很简单，是想做出一款可以有多语言的，简洁的，几乎没有误报和漏报的一款简洁的代码审计工具(注意是几乎)。当然这个是很困难的QAQ。</p>
 <p>然后在写了一版申报书之后，发现自己想的太多了。这样一个大的项目以我本科生的水平几乎就是不可能完成的。所以呀，饭还是得一口一口吃。</p>
 <p class='item-img' data-src='/2023/05/05/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E6%BC%AB%E8%B0%88/image-20230505183918363.png'><img src="/2023/05/05/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E6%BC%AB%E8%B0%88/image-20230505183918363.png" alt="image-20230505183918363"></p>
 <p>根据老师的一些建议，现在想的是如何从一个小的点上有所突破，做一个小而精的工具。我想这是我可以做到的</p>
-<h1>一些概念</h1>
-<p>其实一个好用的工具，最简单的标准就是自动化。不要当每一个人都是技术大牛，就算是技术大牛，有简单的工具我相信也没有人会去用复杂的工具</p>
+<h1 id="一些概念"><a href="#一些概念" class="headerlink" title="一些概念"></a>一些概念</h1><p>其实一个好用的工具，最简单的标准就是自动化。不要当每一个人都是技术大牛，就算是技术大牛，有简单的工具我相信也没有人会去用复杂的工具</p>
 <p>所以自动化一定是最基础的要求点</p>
 <p>那怎么做到自动化，要有两个词的概念理解</p>
-<h2 id="1-漏报率"><a href="#1.漏报率" class="headerlink" title="1.漏报率"></a>1.漏报率</h2>
-<p>没有发现的bug</p>
-<h2 id="2-误报率"><a href="#2.误报率" class="headerlink" title="2.误报率"></a>2.误报率</h2>
-<p>发现了错误的bug</p>
+<h2 id="1-漏报率"><a href="#1-漏报率" class="headerlink" title="1.漏报率"></a>1.漏报率</h2><p>没有发现的bug</p>
+<h2 id="2-误报率"><a href="#2-误报率" class="headerlink" title="2.误报率"></a>2.误报率</h2><p>发现了错误的bug</p>
 <p>自动化代码审计工具正常来说都是我们给他一段代码，他给我们审计结果。这个结果中，里面这两个点就是绕不过的点。其实我之前的想法，什么深度学习，什么语法规则等等巴拉巴拉的东西，都是想为这两个点去服务。</p>
 <p>我们从深层原理去看看，为什么会出现这两个问题，也就是市面上的软件为什么也一直解决不了这个问题</p>
 <p>我们简单的把代码审计工具分为两类一类是动态的代码审计工具，一类是静态的代码审计工具</p>
-<h1>动态代码审计工具</h1>
-<p>这种工具基于代码运行的过程中处理挖掘漏洞一般称为IAST（interactive Application Security Testing）</p>
+<h1 id="动态代码审计工具"><a href="#动态代码审计工具" class="headerlink" title="动态代码审计工具"></a>动态代码审计工具</h1><p>这种工具基于代码运行的过程中处理挖掘漏洞一般称为IAST（interactive Application Security Testing）</p>
 <p>里面一般包含两个技术点</p>
-<h2 id="1-hook"><a href="#1.hook" class="headerlink" title="1.hook"></a>1.hook</h2>
-<p>在软件开发中，Hook是指在程序运行时，通过修改函数调用表（或者函数指针）的方法，使得程序在执行特定函数时，会先执行Hook函数，从而可以监控、修改或者替换原有函数的行为。在安全领域，攻击者可以使用Hook技术，将恶意代码注入到受攻击程序的运行过程中，从而获取敏感信息或者控制程序行为。</p>
-<h2 id="2-前端爬虫"><a href="#2.前端爬虫" class="headerlink" title="2.前端爬虫"></a>2.前端爬虫</h2>
-<p>在前端爬虫中，爬虫程序会模拟浏览器行为，对目标网站进行访问，并收集需要的数据。恶意攻击者可以使用Hook技术，监控网页中的某些函数调用。</p>
+<h2 id="1-hook"><a href="#1-hook" class="headerlink" title="1.hook"></a>1.hook</h2><p>在软件开发中，Hook是指在程序运行时，通过修改函数调用表（或者函数指针）的方法，使得程序在执行特定函数时，会先执行Hook函数，从而可以监控、修改或者替换原有函数的行为。在安全领域，攻击者可以使用Hook技术，将恶意代码注入到受攻击程序的运行过程中，从而获取敏感信息或者控制程序行为。</p>
+<h2 id="2-前端爬虫"><a href="#2-前端爬虫" class="headerlink" title="2.前端爬虫"></a>2.前端爬虫</h2><p>在前端爬虫中，爬虫程序会模拟浏览器行为，对目标网站进行访问，并收集需要的数据。恶意攻击者可以使用Hook技术，监控网页中的某些函数调用。</p>
 <p>这里附上一张流程图</p>
 <p class='item-img' data-src='/2023/05/05/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E6%BC%AB%E8%B0%88/image-20230505193718897.png'><img src="/2023/05/05/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E6%BC%AB%E8%B0%88/image-20230505193718897.png" alt="image-20230505193718897"></p>
 <p>我们通过前端爬虫模仿浏览器访问，同时使用hook，修改程序的执行流，如果如果Hook函数被触发，并满足某种条件，那么我们认为该漏洞存在。</p>
@@ -49,8 +42,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <p>(1) 前端Fuzz爬虫可以保证对正常功能的覆盖率，却很难保证对代码功能的覆盖率。如果曾使用动态代码审计工具对大量的代码扫描，不难发现，这类工具针对漏洞的扫描结果并不会比纯黑盒的漏洞扫描工具有什么优势，其中最大的问题主要集中在功能的覆盖度上。</p>
 <p>一般来说一个项目的代码是会有冗余的。也有很多开发人员也没想到的东西。有太多的代码不会从功能处发现，这样的检测就会有很高漏报率。</p>
 <p>(2) 动态代码审计对底层以及hook策略依赖较强，这里有很多问题。比如我们如果想要依赖IAST来做代码审计工具，我们的核心点就是要设计很多很多的hook方案，但是如果hook的深度不够，我们也不能执行我们的恶意代码，不能判断这里有漏洞。（漏报）还有也不是触发了恶意函数就可以判断有漏洞，比如有一个echo可以执行，不能直接判断为xss。同时由于需要运行，环境，执行效率等等都是很大很大的问题，这样也只能审计单一语言。多语言几乎是海量的工作量，所以现在的代码审计工具基本已经很少完全使用IAST了</p>
-<h1>静态代码审计工具</h1>
-<p>静态代码审计主要是通过分析目标代码，通过纯静态的手段进行分析处理，并挖掘相应的漏洞/Bug.</p>
+<h1 id="静态代码审计工具"><a href="#静态代码审计工具" class="headerlink" title="静态代码审计工具"></a>静态代码审计工具</h1><p>静态代码审计主要是通过分析目标代码，通过纯静态的手段进行分析处理，并挖掘相应的漏洞&#x2F;Bug.</p>
 <p>其实就是简单的人工读代码变成了机器读代码</p>
 <p>最基础的东西，也是最早或者说是最容易想到的方法</p>
 <p>正则匹配</p>
@@ -59,23 +51,22 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <p class='item-img' data-src='/2023/05/05/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E6%BC%AB%E8%B0%88/image-20230505195808917.png'><img src="/2023/05/05/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E6%BC%AB%E8%B0%88/image-20230505195808917.png" alt="image-20230505195808917"></p>
 <p>但是这样永远没有尽头，你说用正则过滤过滤输入还是有用的，但是我们要去匹配代码，不可能完全覆盖，你永远不知道一些牛鬼蛇神怎么写代码</p>
 <p>于是有两种思路</p>
-<h2 id="1-高覆盖性"><a href="#1.高覆盖性" class="headerlink" title="1.高覆盖性"></a>1.高覆盖性</h2>
-<p>这类工具最经典的就是Seay，通过简单的关键字来匹配经可能多的目标，之后使用者可以通过人工审计的方式进一步确认。</p>
+<h2 id="1-高覆盖性"><a href="#1-高覆盖性" class="headerlink" title="1.高覆盖性"></a>1.高覆盖性</h2><p>这类工具最经典的就是Seay，通过简单的关键字来匹配经可能多的目标，之后使用者可以通过人工审计的方式进一步确认。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">\beval\b\(<br></code></pre></td></tr></table></figure>
-<h2 id="2-高可用性"><a href="#2.高可用性" class="headerlink" title="2.高可用性"></a>2.高可用性</h2>
-<p>这类工具最经典的是Rips免费版</p>
+
+<h2 id="2-高可用性"><a href="#2-高可用性" class="headerlink" title="2.高可用性"></a>2.高可用性</h2><p>这类工具最经典的是Rips免费版</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">\beval\b\(\$_(GET|POST)<br></code></pre></td></tr></table></figure>
+
 <p>用更多的正则来约束，用更多的规则来覆盖多种情况。这也是早期静态自动化代码审计工具普遍的实现方法。</p>
 <p>但问题显而易见，<strong>高覆盖性和高可用性是这种实现方法永远无法解决的硬伤，不但维护成本巨大，而且误报率和漏报率也是居高不下</strong>。所以被时代所淘汰也是历史的必然。</p>
 <p>但是现在seay和rips依旧是主流软件，有人可能会问为什么，因为要其他钱啊！（开玩笑）</p>
-<h1>再牛逼一点点</h1>
-<p>AST!!!</p>
+<h1 id="再牛逼一点点"><a href="#再牛逼一点点" class="headerlink" title="再牛逼一点点"></a>再牛逼一点点</h1><p>AST!!!</p>
 <p>AST（Abstract Syntax Tree，抽象语法树）是一种用于表示程序源代码语法结构的树状数据结构。在编译器、解释器等程序分析工具中，AST通常是从源代码中生成的一种中间表示形式，用于对程序进行分析、优化、转换等操作。</p>
 <p>AST通常由一系列节点组成，每个节点表示源代码中的一个语法结构，例如函数、变量声明、表达式、控制流语句等。节点之间通过父子关系组织成一棵树，每个节点包含了语法结构的信息，例如标识符、运算符、字面量等。</p>
 <p>AST可以被用于各种程序分析和转换任务中，例如语法检查、编译优化、代码重构、程序理解和分析等。在编译器中，AST通常是编译过程中的一个重要中间表示形式，被用于生成目标代码。在静态分析工具中，AST可以被用于检查和修复代码中的各种问题，例如潜在的安全漏洞、性能瓶颈、代码风格问题等。</p>
 <p>AST在许多编程语言的编译器和解释器中都得到了广泛的应用，以下是一些使用AST的编程语言：</p>
 <ol>
-<li>C/C++：GCC、Clang等编译器使用AST作为中间表示形式，用于编译、优化和代码生成。</li>
+<li>C&#x2F;C++：GCC、Clang等编译器使用AST作为中间表示形式，用于编译、优化和代码生成。</li>
 <li>Java：Java编译器使用AST作为中间表示形式，用于语法检查、编译优化和代码生成。</li>
 <li>Python：Python解释器和静态分析工具使用AST进行代码检查、代码重构和性能优化。</li>
 <li>JavaScript：JavaScript解释器和编译器使用AST进行代码分析、优化和转换。</li>
@@ -130,36 +121,36 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <p class='item-img' data-src='/2023/05/05/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E6%BC%AB%E8%B0%88/image-20230505210410685.png'><img src="/2023/05/05/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E6%BC%AB%E8%B0%88/image-20230505210410685.png" alt="image-20230505210410685"></p>
 <p>这几乎是一个没有漏洞的代码，因为被过滤了</p>
 <p>但是AST不行</p>
-<p>这是一个典型的全局过滤，人工审计可以很容易看出这里被过滤了。但是如果在自动化分析过程中，当回溯到Source为<code>$_GET['a']</code>时，已经满足了从Source到sink的information flow。已经被识别为漏洞。一个典型的误报就出现了。</p>
+<p>这是一个典型的全局过滤，人工审计可以很容易看出这里被过滤了。但是如果在自动化分析过程中，当回溯到Source为<code>$_GET[&#39;a&#39;]</code>时，已经满足了从Source到sink的information flow。已经被识别为漏洞。一个典型的误报就出现了。</p>
 <p>而基于AST的自动化代码审计工具也正是在与这样的问题做博弈，从PHP自动化代码审计中比较知名的Rips、Cobra</p>
 <p>都是在不同的方式方法上，优化information flow分析的结果，而最大的区别则是离不开的<strong>高可用性、高覆盖性</strong>两点核心</p>
 <p>对于基于AST的代码分析来说，最大的挑战在于<strong>没人能保证自己完美的处理所有的AST结构，再加上基于单向流的分析方式，无法应对100%的场景</strong>，这也正是这类工具面临的问题（或者说，这也就是为什么选择逆向的原因）。</p>
 <p>所以呀，逆向很重要</p>
 <p>emmmm看来到目前也没有很好的解决方法</p>
-<h1>还有基于IR/CFG的分析</h1>
-<p>AST是一个中间树，还有别的吗，答案是肯定的</p>
-<p>AST是编译原理中IR/CFG的更上层</p>
-<p>也就是说，分析AST更接近分析代码，换句话就是说基于AST的分析得到的流，更接近脑子里对代码执行里的流程，忽略了大多数的分支、跳转、循环这类影响执行过程顺序的条件，这也是基于AST的代码分析的普遍解决方案，当然，从结果论上很难辨别忽略带来的后果。所以<strong>基于IR/CFG这类带有控制流的解决方案，是现在更主流的代码分析方案，但不是唯一</strong>。</p>
-<h2 id="什么是IR-CFG"><a href="#什么是IR/CFG" class="headerlink" title="什么是IR/CFG"></a>什么是IR/CFG</h2>
-<p>IR（Intermediate Representation，中间表示）是一种高级语言和机器语言之间的抽象表示形式，通常是一种低级别的、机器无关的表示形式。IR可以作为编译器的一个重要中间表示形式，用于在源代码和目标代码之间进行转换和优化。IR通常是一种树状结构，包含了程序的控制流、数据流和操作等信息。</p>
+<h1 id="还有基于IR-x2F-CFG的分析"><a href="#还有基于IR-x2F-CFG的分析" class="headerlink" title="还有基于IR&#x2F;CFG的分析"></a>还有基于IR&#x2F;CFG的分析</h1><p>AST是一个中间树，还有别的吗，答案是肯定的</p>
+<p>AST是编译原理中IR&#x2F;CFG的更上层</p>
+<p>也就是说，分析AST更接近分析代码，换句话就是说基于AST的分析得到的流，更接近脑子里对代码执行里的流程，忽略了大多数的分支、跳转、循环这类影响执行过程顺序的条件，这也是基于AST的代码分析的普遍解决方案，当然，从结果论上很难辨别忽略带来的后果。所以<strong>基于IR&#x2F;CFG这类带有控制流的解决方案，是现在更主流的代码分析方案，但不是唯一</strong>。</p>
+<h2 id="什么是IR-x2F-CFG"><a href="#什么是IR-x2F-CFG" class="headerlink" title="什么是IR&#x2F;CFG"></a>什么是IR&#x2F;CFG</h2><p>IR（Intermediate Representation，中间表示）是一种高级语言和机器语言之间的抽象表示形式，通常是一种低级别的、机器无关的表示形式。IR可以作为编译器的一个重要中间表示形式，用于在源代码和目标代码之间进行转换和优化。IR通常是一种树状结构，包含了程序的控制流、数据流和操作等信息。</p>
 <p>CFG（Control Flow Graph，控制流图）是一种用于表示程序控制流的图形表示形式。CFG通过将程序的各个基本块（basic block）抽象为节点，将基本块之间的控制流关系抽象为有向边，从而形成一个图形结构。CFG可以用于描述程序的控制流结构，帮助程序员理解程序的执行过程，并在编译器中用于代码优化和转换。</p>
 <p>一般来说，我们需要遍历IR来生成CFG，其中需要按照一定的规则.当然，也可以用AST来生成CFG，毕竟AST是比较高的层级。</p>
 <p>而基于CFG的代码分析思路优势在于，对于一份代码来说，你首先有了一份控制流图（或者说是执行顺序），然后才到漏洞挖掘这一步。<strong>比起基于AST的代码分析来说，你只需要专注于从Source到Sink的过程即可</strong>。</p>
 <p>挑战的核心仍然维持在如何控制流，维持作用域，处理程序逻辑的分支过程，确认Source与Sink。</p>
 <p>理所当然的是，既然存在基于AST的代码分析，又存在基于CFG的代码分析，自然也存在其他的种类。比如现在市场上主流的fortify，Checkmarx，Coverity包括最新的Rips都使用了自己构造的语言的某一个中间部分，比如fortify和Coverity就需要对源码编译的某一个中间语言进行分析。前段时间被阿里收购的源伞甚至实现了多种语言生成统一的IR，这样一来对于新语言的扫描支持难度就变得大大减少了。</p>
-<h1>新东西QL</h1>
-<p>AST,CFG等其实本质上还是对于数据流的分析</p>
+<h1 id="新东西QL"><a href="#新东西QL" class="headerlink" title="新东西QL"></a>新东西QL</h1><p>AST,CFG等其实本质上还是对于数据流的分析</p>
 <p>而QL就是把这个流的每一个环节具象化，把每个节点的操作具像成状态的变化，并且储存到数据库中。这样一来，通过构造QL语言，我们就能找到满足条件的节点，并构造成流。下面我举一个简单的例子来说：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">&lt;?php<br><br>$a = $_GET[&#x27;a&#x27;];<br>$b = htmlspecialchars($a);<br><br>echo $b;<br></code></pre></td></tr></table></figure>
+
 <p>我们简单的把前面的流写成一个表达式</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">echo =&gt; $_GET.is_filterxss<br></code></pre></td></tr></table></figure>
+
 <p>这里<code>is_filterxss</code>被认为是输入<code>$_GET</code>的一个标记，在分析这类漏洞的时候，我们就可以直接用QL表达</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">select * where &#123;<br>    Source : $_GET,<br>    Sink : echo,<br>    is_filterxss : False,<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <p>我们就可以找到这个漏洞（上面的代码仅为伪代码），从这样的一个例子我们不难发现，QL其实更接近一个概念，他鼓励将信息流具象化，这样我们就可以用更通用的方式去写规则筛选。</p>
 <p>也就是更加的简单和方便</p>
 <p>也正是建立在这个基础上，CodeQL诞生了，它更像是一个基础平台，让你不需要在操心底层逻辑，使用AST还是CFG又或是某种平台，你可以将自动化代码分析简化约束为我们需要用怎么样的规则来找到满足某个漏洞的特征。这个概念也正是现代代码分析主流的实现思路，也就是将需求转嫁到更上层。</p>
 <p>参考文献：<a target="_blank" rel="noopener" href="https://paper.seebug.org/1339/#_1">https://paper.seebug.org/1339/#_1</a></p>
-<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2023/05/06/%E5%85%B3%E4%BA%8Ecodeql%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83%E5%92%8C%E5%AD%A6%E4%B9%A0/">← Next 关于codeql的一些思考和学习</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2023/05/05/HNCTF2022Week1%E9%83%A8%E5%88%86wp/">HNCTF 2022 week1 Writeup Prev →</a></div></div></div></div><div class="bottom-btn"><div><a id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a id="to-index" href="#toc-div" title="文章目录">≡</a><a id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">Dr0se</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">一些概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%BC%8F%E6%8A%A5%E7%8E%87"><span class="toc-number">2.1.</span> <span class="toc-text">1.漏报率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%AF%AF%E6%8A%A5%E7%8E%87"><span class="toc-number">2.2.</span> <span class="toc-text">2.误报率</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">动态代码审计工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-hook"><span class="toc-number">3.1.</span> <span class="toc-text">1.hook</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%89%8D%E7%AB%AF%E7%88%AC%E8%99%AB"><span class="toc-number">3.2.</span> <span class="toc-text">2.前端爬虫</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">静态代码审计工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%AB%98%E8%A6%86%E7%9B%96%E6%80%A7"><span class="toc-number">4.1.</span> <span class="toc-text">1.高覆盖性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7"><span class="toc-number">4.2.</span> <span class="toc-text">2.高可用性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">再牛逼一点点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">还有基于IR&#x2F;CFG的分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFIR-CFG"><span class="toc-number">6.1.</span> <span class="toc-text">什么是IR&#x2F;CFG</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">新东西QL</span></a></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {code.findCode();
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2023/05/06/%E5%85%B3%E4%BA%8Ecodeql%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83%E5%92%8C%E5%AD%A6%E4%B9%A0/">← Next 关于codeql的一些思考和学习</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2023/05/05/HNCTF2022Week1%E9%83%A8%E5%88%86wp/">HNCTF 2022 week1 Writeup Prev →</a></div></div></div></div><div class="bottom-btn"><div><a id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧</a><a id="to-index" href="#toc-div" title="To Catalog">≡</a><a id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">Dr0se</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5"><span class="toc-number">2.</span> <span class="toc-text">一些概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%BC%8F%E6%8A%A5%E7%8E%87"><span class="toc-number">2.1.</span> <span class="toc-text">1.漏报率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%AF%AF%E6%8A%A5%E7%8E%87"><span class="toc-number">2.2.</span> <span class="toc-text">2.误报率</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E5%B7%A5%E5%85%B7"><span class="toc-number">3.</span> <span class="toc-text">动态代码审计工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-hook"><span class="toc-number">3.1.</span> <span class="toc-text">1.hook</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%89%8D%E7%AB%AF%E7%88%AC%E8%99%AB"><span class="toc-number">3.2.</span> <span class="toc-text">2.前端爬虫</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E5%B7%A5%E5%85%B7"><span class="toc-number">4.</span> <span class="toc-text">静态代码审计工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%AB%98%E8%A6%86%E7%9B%96%E6%80%A7"><span class="toc-number">4.1.</span> <span class="toc-text">1.高覆盖性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7"><span class="toc-number">4.2.</span> <span class="toc-text">2.高可用性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%8D%E7%89%9B%E9%80%BC%E4%B8%80%E7%82%B9%E7%82%B9"><span class="toc-number">5.</span> <span class="toc-text">再牛逼一点点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%98%E6%9C%89%E5%9F%BA%E4%BA%8EIR-x2F-CFG%E7%9A%84%E5%88%86%E6%9E%90"><span class="toc-number">6.</span> <span class="toc-text">还有基于IR&#x2F;CFG的分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFIR-x2F-CFG"><span class="toc-number">6.1.</span> <span class="toc-text">什么是IR&#x2F;CFG</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%B0%E4%B8%9C%E8%A5%BFQL"><span class="toc-number">7.</span> <span class="toc-text">新东西QL</span></a></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {code.findCode();
 document.querySelector('.lg-container')?.remove()
 lightGallery(document.getElementById('post-bg'), {
   plugins: [lgZoom,lgThumbnail],
