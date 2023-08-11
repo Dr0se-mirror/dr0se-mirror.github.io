@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ch" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>网络安全知识基础-计网常识 | Hexo</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":true,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - 共 $1 行","copy":"复制","copyFinish":"复制成功","expand":"展开"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/brands.min.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/fontawesome.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+<!DOCTYPE html><html lang="ch" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>网络安全知识基础-计网常识 | Hexo</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":true,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy","copyFinish":"copied","expand":"expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/brands.min.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/fontawesome.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
 if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
  font-family: BenderLight;
  src: local('Bender'), url("/font/BenderLight.ttf");
@@ -17,61 +17,79 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
   --light-background: url('/img/bk.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn hide"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>网络安全知识基础-计网常识</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-08-10T15:04:17.000Z" id="date"> 2023-08-10</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2023-08-11T02:22:16.664Z" id="updated"> 2023-08-11</time></div></span></div></div><hr><div id="post-content"><h1>前言</h1>
-<p>这篇文章估计会很长，因为我在工作中发现自己对于计算机网络的东西真的知道的太少太少了，所以以后遇到不会的，或者说是知道但是不熟悉的计算机网络的知识点都会往这篇文章上面去放。希望可以持续更新，这篇文章也可以帮助我真正的成长。这里不会讲很多很复杂难懂的原理，我会尽量用自己的理解写下最简单易懂又实用的技术知识点。如果有错误，还望指正。</p>
-<h1>ip地址分类</h1>
-<p>IP地址等于网络地址加上主机地址，网络地址表示其属于互联网的哪一个网络，主机地址表示其属于该网络中的哪一台主机。二者是主从关系。IP被分为A、B、C、D、E五类。</p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn hide"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>网络安全知识基础-计网常识</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2023-08-10T15:04:17.000Z" id="date"> 2023-08-10</time></div></span><br><span>Last Update: <div class="control"><time datetime="2023-08-11T06:11:42.749Z" id="updated"> 2023-08-11</time></div></span></div></div><hr><div id="post-content"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这篇文章估计会很长，因为我在工作中发现自己对于计算机网络的东西真的知道的太少太少了，所以以后遇到不会的，或者说是知道但是不熟悉的计算机网络的知识点都会往这篇文章上面去放。希望可以持续更新，这篇文章也可以帮助我真正的成长。这里不会讲很多很复杂难懂的原理，我会尽量用自己的理解写下最简单易懂又实用的技术知识点。如果有错误，还望指正。</p>
+<h1 id="ip地址分类"><a href="#ip地址分类" class="headerlink" title="ip地址分类"></a>ip地址分类</h1><p>IP地址等于网络地址加上主机地址，网络地址表示其属于互联网的哪一个网络，主机地址表示其属于该网络中的哪一台主机。二者是主从关系。IP被分为A、B、C、D、E五类。</p>
 <p>ip地址由4段组成，一段一个字节8位，所以有32位组成一个ip地址</p>
 <p class='item-img' data-src='/2023/08/10/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E5%9F%BA%E7%A1%80-%E8%AE%A1%E7%BD%91%E5%B8%B8%E8%AF%86/image-20230808211243508.png'><img src="/2023/08/10/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E5%9F%BA%E7%A1%80-%E8%AE%A1%E7%BD%91%E5%B8%B8%E8%AF%86/image-20230808211243508.png" alt="image-20230808211243508"></p>
-<h2 id="A类："><a href="#A类：" class="headerlink" title="A类："></a>A类：</h2>
-<p>（1.0.0.0-126.0.0.0）第一个字节为网络号，后三个字节为主机号。该类IP地址的最前面为“0”，所以地址的网络号取值于1~126之间。一般用于大型网络。</p>
+<h2 id="A类："><a href="#A类：" class="headerlink" title="A类："></a>A类：</h2><p>（1.0.0.0-126.0.0.0）第一个字节为网络号，后三个字节为主机号。该类IP地址的最前面为“0”，所以地址的网络号取值于1~126之间。一般用于大型网络。</p>
 <p>​	默认子网掩码：255.0.0.0或 0xFF000000</p>
 <p>​	其中私有地址范围是：10.0.0.0～10.255.255.255</p>
-<h2 id="B类："><a href="#B类：" class="headerlink" title="B类："></a>B类：</h2>
-<p>（128.0.0.0-191.255.0.0）前两个字节为网络号，后两个字节为主机号。该类IP地址的最前面为“10”，所以地址的网络号取值于128~191之间。一般用于中等规模网络。</p>
+<h2 id="B类："><a href="#B类：" class="headerlink" title="B类："></a>B类：</h2><p>（128.0.0.0-191.255.0.0）前两个字节为网络号，后两个字节为主机号。该类IP地址的最前面为“10”，所以地址的网络号取值于128~191之间。一般用于中等规模网络。</p>
 <p>​	默认子网掩码：255.255.0.0或0xFFFF0000</p>
 <p>​	其中私有地址范围是：172.16.0.0～172.31.255.255</p>
-<h2 id="C类："><a href="#C类：" class="headerlink" title="C类："></a>C类：</h2>
-<p>（192.0.0.0-223.255.255.0）前三个字节为网络号，最后一个字节为主机号。该类IP地址的最前面为“110”，所以地址的网络号取值于192~223之间。一般用于小型网络。</p>
+<h2 id="C类："><a href="#C类：" class="headerlink" title="C类："></a>C类：</h2><p>（192.0.0.0-223.255.255.0）前三个字节为网络号，最后一个字节为主机号。该类IP地址的最前面为“110”，所以地址的网络号取值于192~223之间。一般用于小型网络。</p>
 <p>​	子网掩码：255.255.255.0或 0xFFFFFF00</p>
 <p>​	其中私有地址范围是：192.168.0.0～192.168.255.255</p>
 <p>我们一般来说现在用的平时可以接触到的基本都是c类地址</p>
-<h2 id="D类："><a href="#D类：" class="headerlink" title="D类："></a>D类：</h2>
-<p>是多播地址。该类IP地址的最前面为“1110”，所以地址的网络号取值于224~239之间。一般用于多路广播用户。</p>
-<h2 id="E类："><a href="#E类：" class="headerlink" title="E类："></a>E类：</h2>
-<p>是保留地址。该类IP地址的最前面为“1111”，所以地址的网络号取值于240~255之间。</p>
+<h2 id="D类："><a href="#D类：" class="headerlink" title="D类："></a>D类：</h2><p>是多播地址。该类IP地址的最前面为“1110”，所以地址的网络号取值于224~239之间。一般用于多路广播用户。</p>
+<h2 id="E类："><a href="#E类：" class="headerlink" title="E类："></a>E类：</h2><p>是保留地址。该类IP地址的最前面为“1111”，所以地址的网络号取值于240~255之间。</p>
 <p>​	在这些IP地址中，按照用途的范围又可以分为公有地址和私有地址两大类，公用地址在Internet中使用，可以在Internet中随意访问。私有地址只能在内部网络中使用，只有通过代理服务器才能与Internet<a target="_blank" rel="noopener" href="https://www.elecfans.com/v/tag/1301/">通信</a>。使用保留地址的网络只能在内部进行通信，而不能与其他网络互连。因为本网络中的保留地址同样也可能被其它网络使用，如果进行网络互连，那么寻找路由时就会因为地址的不唯一而出现问题。</p>
-<p>​	子网掩码的作用是计算网络标识，即IP地址 &amp; 子网掩码 = 网络标识。</p>
+<p>​	子网掩码的作用是计算网络标识，即IP地址 &amp; 子网掩码 &#x3D; 网络标识。</p>
 <p class='item-img' data-src='/2023/08/10/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E5%9F%BA%E7%A1%80-%E8%AE%A1%E7%BD%91%E5%B8%B8%E8%AF%86/image-20230808211553666.png'><img src="/2023/08/10/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E5%9F%BA%E7%A1%80-%E8%AE%A1%E7%BD%91%E5%B8%B8%E8%AF%86/image-20230808211553666.png" alt="image-20230808211553666"></p>
-<h1>网关</h1>
-<p>大家都知道，从一个房间走到另一个房间，必然要经过一扇门。同样，从一个网络向另一个网络发送信息，也必须经过一道“关口”，这道关口就是网关。顾名思义，网关(Gateway)就是一个网络连接到另一个网络的“关口”。</p>
+<h1 id="网关"><a href="#网关" class="headerlink" title="网关"></a>网关</h1><p>大家都知道，从一个房间走到另一个房间，必然要经过一扇门。同样，从一个网络向另一个网络发送信息，也必须经过一道“关口”，这道关口就是网关。顾名思义，网关(Gateway)就是一个网络连接到另一个网络的“关口”。</p>
 <p>网关有两种，面向连接的和不面向连接的（这个不懂就remake吧）</p>
 <p>当两个子网之间有一定距离时，往往将一个网关分成两半，中间用一条链路连接起来，我们称之为半网关。</p>
-<p>按照不同的分类标准，网关也有很多种。TCP/IP协议里的网关是最常用的，在这里我们所讲的“网关”均指TCP/IP协议下的网关。</p>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2>
-<p>网关实质上是<strong>一个网络通向其他网络的IP地址</strong>。比如有网络A和网络B，</p>
-<p>网络A的IP地址范围为<br>
-“192.168.1.1~192. 168.1.254”，<br>
-子网掩码为<br>
-255.255.255.0；</p>
-<p>网络B的IP地为<br>
-“192.168.2.1~192.168.2.254”，<br>
-子网掩码为<br>
-255.255.255.0。</p>
-<p>在没有路由器的情况下，两个网络之间是不能进行TCP/IP通信的，即使是两个网络连接在同一台交换机(或集线器)上，TCP/IP协议也会根据子网掩码(255.255.255.0)判定两个网络中的主机处在不同的网络里。而要实现这两个网络之间的通信，则必须通过网关。如果网络A中的主机发现数据包的目的主机不在本地网络中，就把数据包转发给它自己的网关，再由网关转发给网络B的网关，网络B的网关再转发给网络B的某个主机。</p>
-<h2 id="默认网关"><a href="#默认网关" class="headerlink" title="默认网关"></a>默认网关</h2>
-<p>如果搞清了什么是网关，默认网关也就好理解了。就好像一个房间可以有多扇门一样，一台主机可以有多个网关。默认网关的意思是一台主机如果找不到可用的网关，就把数据包发给默认指定的网关，由这个网关来处理数据包。现在主机使用的网关，一般指的是默认网关。</p>
-<h2 id="网关工作原理例子"><a href="#网关工作原理例子" class="headerlink" title="网关工作原理例子"></a>网关工作原理例子</h2>
-<p>假设你的名字叫小不点，你住在一个大院子里，你的邻居有很多小伙伴，在门口传达室还有个看大门的李大爷，李大爷就是你的网关。当你想跟院子里的某个小伙伴玩，只要你在院子里大喊一声他的名字，他听到了就会回应你，并且跑出来跟你玩。</p>
+<p>按照不同的分类标准，网关也有很多种。TCP&#x2F;IP协议里的网关是最常用的，在这里我们所讲的“网关”均指TCP&#x2F;IP协议下的网关。</p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>网关实质上是<strong>一个网络通向其他网络的IP地址</strong>。比如有网络A和网络B，</p>
+<p>网络A的IP地址范围为<br>“192.168.1.1~192. 168.1.254”，<br>子网掩码为<br>255.255.255.0；</p>
+<p>网络B的IP地为<br>“192.168.2.1~192.168.2.254”，<br>子网掩码为<br>255.255.255.0。</p>
+<p>在没有路由器的情况下，两个网络之间是不能进行TCP&#x2F;IP通信的，即使是两个网络连接在同一台交换机(或集线器)上，TCP&#x2F;IP协议也会根据子网掩码(255.255.255.0)判定两个网络中的主机处在不同的网络里。而要实现这两个网络之间的通信，则必须通过网关。如果网络A中的主机发现数据包的目的主机不在本地网络中，就把数据包转发给它自己的网关，再由网关转发给网络B的网关，网络B的网关再转发给网络B的某个主机。</p>
+<h2 id="默认网关"><a href="#默认网关" class="headerlink" title="默认网关"></a>默认网关</h2><p>如果搞清了什么是网关，默认网关也就好理解了。就好像一个房间可以有多扇门一样，一台主机可以有多个网关。默认网关的意思是一台主机如果找不到可用的网关，就把数据包发给默认指定的网关，由这个网关来处理数据包。现在主机使用的网关，一般指的是默认网关。</p>
+<h2 id="网关工作原理例子"><a href="#网关工作原理例子" class="headerlink" title="网关工作原理例子"></a>网关工作原理例子</h2><p>　　假设你的名字叫小不点，你住在一个大院子里，你的邻居有很多小伙伴，在门口传达室还有个看大门的李大爷，李大爷就是你的网关。当你想跟院子里的某个小伙伴玩，只要你在院子里大喊一声他的名字，他听到了就会回应你，并且跑出来跟你玩。</p>
 <p>但是你不被允许走出大门，你想与外界发生的一切联系，都必须由门口的李大爷（网关）用电话帮助你联系。假如你想找你的同学小明聊天，小明家住在很远的另外一个院子里，他家的院子里也有一个看门的王大爷（小明的网关）。但是你不知道小明家的电话号码，不过你的班主任老师有一份你们班全体同学的名单和电话号码对照表，<strong>你的老师就是你的DNS服务器</strong>。于是你在家里拨通了门口李大爷的电话，有了下面的对话：</p>
-<p>小不点：李大爷，我想找班主任查一下小明的电话号码行吗？<br>
-李大爷：好，你等着。（接着李大爷给你的班主任挂了一个电话，问清楚了小明的电话）问到了，他家的号码是211.99.99.99<br>
-小不点：太好了！李大爷，我想找小明，你再帮我联系一下小明吧。<br>
-李大爷：没问题。（接着李大爷向电话局发出了请求接通小明家电话的请求，最后一关当然是被转接到了小明家那个院子的王大爷那里，然后王大爷把电话给转到小明家）<br>
-就这样你和小明取得了联系。</p>
-<h1>网卡</h1>
-<p>网卡又叫网络适配器，无论在哪一层，他都是充当计算机和数据的中间媒介。</p>
-<div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-end"><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2023/08/10/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E9%9B%B6%E4%BF%A1%E4%BB%BB/">网络安全基础知识-零信任 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a id="to-index" href="#toc-div" title="文章目录">≡</a><a id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">Dr0se</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">ip地址分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#A%E7%B1%BB%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">A类：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B%E7%B1%BB%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">B类：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C%E7%B1%BB%EF%BC%9A"><span class="toc-number">2.3.</span> <span class="toc-text">C类：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#D%E7%B1%BB%EF%BC%9A"><span class="toc-number">2.4.</span> <span class="toc-text">D类：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#E%E7%B1%BB%EF%BC%9A"><span class="toc-number">2.5.</span> <span class="toc-text">E类：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">网关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">3.1.</span> <span class="toc-text">例子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E7%BD%91%E5%85%B3"><span class="toc-number">3.2.</span> <span class="toc-text">默认网关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E5%85%B3%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E4%BE%8B%E5%AD%90"><span class="toc-number">3.3.</span> <span class="toc-text">网关工作原理例子</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">网卡</span></a></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {code.findCode();
+<p>小不点：李大爷，我想找班主任查一下小明的电话号码行吗？<br>李大爷：好，你等着。（接着李大爷给你的班主任挂了一个电话，问清楚了小明的电话）问到了，他家的号码是211.99.99.99<br>小不点：太好了！李大爷，我想找小明，你再帮我联系一下小明吧。<br>李大爷：没问题。（接着李大爷向电话局发出了请求接通小明家电话的请求，最后一关当然是被转接到了小明家那个院子的王大爷那里，然后王大爷把电话给转到小明家）<br>就这样你和小明取得了联系。</p>
+<h1 id="网卡"><a href="#网卡" class="headerlink" title="网卡"></a>网卡</h1><p>网卡又叫网络适配器，无论在哪一层，他都是充当计算机和数据的中间媒介。物理网卡不去讨论，主要研究一下虚拟网卡</p>
+<h2 id="虚拟网卡"><a href="#虚拟网卡" class="headerlink" title="虚拟网卡"></a>虚拟网卡</h2><p>虚拟网卡（Virtual Network Adapter 或 Virtual  NIC）是在软件中模拟的网络接口卡（NIC）。与物理网络接口卡一样，虚拟网卡也有其自己的 MAC 地址和 IP  地址。虽然它不是一个真实的、物理存在的设备，但操作系统和应用程序都会将其视为一个真实的网络接口。</p>
+<h3 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h3><p>场景描述</p>
+<p><strong>公司</strong>: 铁盾安全公司</p>
+<p><strong>需求</strong>: 铁盾安全公司为其客户提供网络安全审计服务。为了模拟不同的网络攻击场景并测试客户的防御能力，他们需要在单一的物理服务器上创建多个独立的虚拟网络环境。</p>
+<p>虚拟网卡在此场景中的应用</p>
+<ol>
+<li><strong>创建虚拟机</strong>: 为了模拟多个网络环境，铁盾使用 VMware 创建了四个虚拟机：<code>Attack-VM1</code>、<code>Attack-VM2</code>、<code>Target-VM1</code> 和 <code>Target-VM2</code>。</li>
+<li><strong>配置虚拟网卡</strong>: 每个虚拟机都被分配了一个虚拟网卡。这些虚拟网卡具有与物理网络接口卡相似的功能，如分配IP地址、MAC地址等。</li>
+<li><strong>隔离网络环境</strong>: 为了确保每个模拟攻击都在一个控制的环境中进行，铁盾决定将 <code>Attack-VM1</code> 和 <code>Target-VM1</code> 放在一个虚拟网络中，而 <code>Attack-VM2</code> 和 <code>Target-VM2</code> 放在另一个虚拟网络中。虚拟网卡的配置使这种隔离变得简单，因为它们可以轻松地指定哪些虚拟机可以互相通信。</li>
+<li><strong>模拟攻击</strong>: 一旦虚拟网络环境准备好，铁盾的安全专家就可以开始模拟攻击。例如，他们可以使用 <code>Attack-VM1</code> 尝试攻击 <code>Target-VM1</code>，同时确保 <code>Attack-VM2</code> 和 <code>Target-VM2</code> 完全不受影响。</li>
+<li><strong>网络流量捕获</strong>: 由于虚拟网卡完全在软件中模拟，铁盾可以轻松地捕获在其上的所有网络流量，用于后续的分析和报告。</li>
+</ol>
+<p>结论</p>
+<p>在这个场景中，铁盾安全公司利用虚拟网卡的功能在单一的物理服务器上创建了多个独立的虚拟网络环境。这使他们能够在控制的环境中模拟网络攻击，同时确保每个测试都不会影响其他虚拟网络或主机系统。虚拟网卡为他们提供了一个灵活且功能强大的工具，用于满足其特定的网络安全测试需求。</p>
+<h2 id="再来一个熟悉一点的例子"><a href="#再来一个熟悉一点的例子" class="headerlink" title="再来一个熟悉一点的例子"></a>再来一个熟悉一点的例子</h2><p>你正在使用你的个人计算机，上面安装了一个虚拟化软件（如 VMware 或 VirtualBox）来运行一个 Linux 虚拟机。你希望这个 Linux 虚拟机能够访问互联网，同时你的主机（宿主机）和虚拟机之间也能互相通信。</p>
+<p><strong>虚拟网卡的角色</strong>：</p>
+<ol>
+<li><strong>在宿主机上</strong>：当你创建虚拟机时，虚拟化软件会在宿主机上创建一个或多个虚拟网卡。这些虚拟网卡在操作系统中看起来就像真正的硬件设备，但实际上完全是由软件模拟的。</li>
+<li><strong>在虚拟机内</strong>：虚拟机自己也会有一张虚拟网卡，它代表虚拟机与外界（可能是宿主机或其他网络）的连接点。</li>
+</ol>
+<h3 id="常见的网络连接配置"><a href="#常见的网络连接配置" class="headerlink" title="常见的网络连接配置"></a>常见的网络连接配置</h3><ol>
+<li><strong>网络桥接模式</strong>：虚拟化软件会将虚拟机的虚拟网卡与宿主机的物理网卡“桥接”在一起。这意味着虚拟机可以像宿主机上的任何其他物理设备一样访问网络。它会从路由器或DHCP服务器获取自己的IP地址。</li>
+<li><strong>NAT（网络地址转换）模式</strong>：虚拟机的所有网络流量都会通过宿主机的物理网卡传输，并使用宿主机的IP地址。这种方式下，虚拟机是不能被网络上的其他设备直接访问的，但它可以访问外部网络。</li>
+<li><strong>主机模式</strong>：虚拟机只能与宿主机通信，不能与外部网络通信。这通常用于测试和隔离环境。</li>
+</ol>
+<p class='item-img' data-src='/2023/08/10/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E5%9F%BA%E7%A1%80-%E8%AE%A1%E7%BD%91%E5%B8%B8%E8%AF%86/image-20230811115913000.png'><img src="/2023/08/10/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E5%9F%BA%E7%A1%80-%E8%AE%A1%E7%BD%91%E5%B8%B8%E8%AF%86/image-20230811115913000.png" alt="image-20230811115913000"></p>
+<p>这里我有用的一张无线网卡和一个虚拟网卡，剩下的未启用</p>
+<p>我看了看我的虚拟网卡的网络信息，同时我看看我的虚拟机kail的ip</p>
+<p>同一网段不同主机</p>
+<p>网卡重启命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl restart networking<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">service networking restart<br></code></pre></td></tr></table></figure>
+
+<p>我使用的是桥接模式，都可以ping通，其实很简单的道理</p>
+<p>由于是kali，网卡信息的位置不一样</p>
+<p>在这里</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/etc/network/interfaces<br></code></pre></td></tr></table></figure>
+
+<p>要自己配</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2023/08/11/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BA%91%E7%9B%98/">← Next 网络安全基础知识-云服务器云盘云原生</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2023/08/10/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E9%9B%B6%E4%BF%A1%E4%BB%BB/">网络安全基础知识-零信任 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧</a><a id="to-index" href="#toc-div" title="To Catalog">≡</a><a id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">Dr0se</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ip%E5%9C%B0%E5%9D%80%E5%88%86%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text">ip地址分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#A%E7%B1%BB%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">A类：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B%E7%B1%BB%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">B类：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C%E7%B1%BB%EF%BC%9A"><span class="toc-number">2.3.</span> <span class="toc-text">C类：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#D%E7%B1%BB%EF%BC%9A"><span class="toc-number">2.4.</span> <span class="toc-text">D类：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#E%E7%B1%BB%EF%BC%9A"><span class="toc-number">2.5.</span> <span class="toc-text">E类：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E5%85%B3"><span class="toc-number">3.</span> <span class="toc-text">网关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">3.1.</span> <span class="toc-text">例子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E7%BD%91%E5%85%B3"><span class="toc-number">3.2.</span> <span class="toc-text">默认网关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E5%85%B3%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E4%BE%8B%E5%AD%90"><span class="toc-number">3.3.</span> <span class="toc-text">网关工作原理例子</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E5%8D%A1"><span class="toc-number">4.</span> <span class="toc-text">网卡</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E7%BD%91%E5%8D%A1"><span class="toc-number">4.1.</span> <span class="toc-text">虚拟网卡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90-1"><span class="toc-number">4.1.1.</span> <span class="toc-text">例子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%8D%E6%9D%A5%E4%B8%80%E4%B8%AA%E7%86%9F%E6%82%89%E4%B8%80%E7%82%B9%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-number">4.2.</span> <span class="toc-text">再来一个熟悉一点的例子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E9%85%8D%E7%BD%AE"><span class="toc-number">4.2.1.</span> <span class="toc-text">常见的网络连接配置</span></a></li></ol></li></ol></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {code.findCode();
 document.querySelector('.lg-container')?.remove()
 lightGallery(document.getElementById('post-bg'), {
   plugins: [lgZoom,lgThumbnail],
