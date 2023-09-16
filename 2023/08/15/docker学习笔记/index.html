@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ch" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>docker学习笔记 | Hexo</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":true,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy","copyFinish":"copied","expand":"expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/brands.min.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/fontawesome.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+<!DOCTYPE html><html lang="ch" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>docker学习笔记 | Hexo</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":true,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - 共 $1 行","copy":"复制","copyFinish":"复制成功","expand":"展开"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/brands.min.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/fontawesome.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
 if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
  font-family: BenderLight;
  src: local('Bender'), url("/font/BenderLight.ttf");
@@ -17,197 +17,160 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
   --light-background: url('/img/bk.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn hide"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>docker学习笔记</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2023-08-15T02:30:28.000Z" id="date"> 2023-08-15</time></div></span><br><span>Last Update: <div class="control"><time datetime="2023-09-08T07:29:37.121Z" id="updated"> 2023-09-08</time></div></span></div></div><hr><div id="post-content"><h1 id="DOCKER安装"><a href="#DOCKER安装" class="headerlink" title="DOCKER安装"></a>DOCKER安装</h1><p>官网：docs.docker.com</p>
-<p>阿里镜像：mirrors.aliyun.com</p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn hide"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>docker学习笔记</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-08-15T02:30:28.000Z" id="date"> 2023-08-15</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2023-09-16T05:01:33.243Z" id="updated"> 2023-09-16</time></div></span></div></div><hr><div id="post-content"><h1>DOCKER安装</h1>
+<p>官网：<a target="_blank" rel="noopener" href="http://docs.docker.com">docs.docker.com</a></p>
+<p>阿里镜像：<a target="_blank" rel="noopener" href="http://mirrors.aliyun.com">mirrors.aliyun.com</a></p>
 <p>版本问题：7.3 ，7.2，7.1，7.0的centos不能装docker，有很多bug，推荐7.9以上</p>
 <p>内核要求：centos内核要求3.0以上</p>
-<h2 id="ssh配置"><a href="#ssh配置" class="headerlink" title="ssh配置"></a>ssh配置</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/612658181">https://zhuanlan.zhihu.com/p/612658181</a></p>
+<h2 id="ssh配置"><a href="#ssh配置" class="headerlink" title="ssh配置"></a>ssh配置</h2>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/612658181">https://zhuanlan.zhihu.com/p/612658181</a></p>
 <p><strong>一、centos 7 安装vim</strong></p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">yum -y install vim<br></code></pre></td></tr></table></figure>
-
 <p>出现了问题</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820213041547.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820213041547.png" alt="image-20230820213041547"></p>
 <p>进程被锁了</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -f /var/run/yum.pid<br></code></pre></td></tr></table></figure>
-
 <p>这样就可以正常搞东西了</p>
 <p><strong>二、安装与配置SSH</strong></p>
 <p><strong>2.1 安装openssh-server</strong></p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">yum install -y openssl openssh-server<br></code></pre></td></tr></table></figure>
-
 <p><strong>2.2 配置ssh_server信息</strong></p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">vim /etc/ssh/sshd_config<br>PubkeyAuthentication yes<br></code></pre></td></tr></table></figure>
-
 <p><strong>2.3 启动ssh服务</strong></p>
-<p>#启动ssh服务 </p>
+<p>#启动ssh服务</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">systemctl start sshd.service <br></code></pre></td></tr></table></figure>
-
-<p>#设置开机启动 </p>
+<p>#设置开机启动</p>
 <p>systemctl enable sshd.service</p>
-<h2 id="检查"><a href="#检查" class="headerlink" title="检查"></a>检查</h2><h3 id="版本检查"><a href="#版本检查" class="headerlink" title="版本检查"></a>版本检查</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> /etc/redhat-release<br></code></pre></td></tr></table></figure>
-
+<h2 id="检查"><a href="#检查" class="headerlink" title="检查"></a>检查</h2>
+<h3 id="版本检查"><a href="#版本检查" class="headerlink" title="版本检查"></a>版本检查</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> /etc/redhat-release<br></code></pre></td></tr></table></figure>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820210924058.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820210924058.png" alt="image-20230820210924058"></p>
-<h3 id="内核检查"><a href="#内核检查" class="headerlink" title="内核检查"></a>内核检查</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">uname</span> -r<br></code></pre></td></tr></table></figure>
-
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs plaintext"># step 1: 安装必要的一些系统工具<br>sudo yum install -y yum-utils device-mapper-persistent-data lvm2<br># Step 2: 添加软件源信息<br>sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo<br># Step 3<br>sudo sed -i &#x27;s+download.docker.com+mirrors.aliyun.com/docker-ce+&#x27; /etc/yum.repos.d/docker-ce.repo<br># Step 4: 更新并安装Docker-CE<br>sudo yum makecache fast<br>sudo yum -y install docker-ce<br># Step 4: 开启Docker服务<br>sudo service docker start<br><br># 注意：<br># 官方软件源默认启用了最新的软件，您可以通过编辑软件源的方式获取各个版本的软件包。例如官方并没有将测试版本的软件源置为可用，您可以通过以下方式开启。同理可以开启各种测试版本等。<br># vim /etc/yum.repos.d/docker-ce.repo<br>#   将[docker-ce-test]下方的enabled=0修改为enabled=1<br>#<br># 安装指定版本的Docker-CE:<br># Step 1: 查找Docker-CE的版本:<br># yum list docker-ce.x86_64 --showduplicates | sort -r<br>#   Loading mirror speeds from cached hostfile<br>#   Loaded plugins: branch, fastestmirror, langpacks<br>#   docker-ce.x86_64            17.03.1.ce-1.el7.centos            docker-ce-stable<br>#   docker-ce.x86_64            17.03.1.ce-1.el7.centos            @docker-ce-stable<br>#   docker-ce.x86_64            17.03.0.ce-1.el7.centos            docker-ce-stable<br>#   Available Packages<br># Step2: 安装指定版本的Docker-CE: (VERSION例如上面的17.03.0.ce.1-1.el7.centos)<br># sudo yum -y install docker-ce-[VERSION]<br><br></code></pre></td></tr></table></figure>
-
-<h1 id="ssh开启"><a href="#ssh开启" class="headerlink" title="ssh开启"></a>ssh开启</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">service sshd start<br></code></pre></td></tr></table></figure>
-
-
-
+<h3 id="内核检查"><a href="#内核检查" class="headerlink" title="内核检查"></a>内核检查</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">uname</span> -r<br></code></pre></td></tr></table></figure>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs plaintext"># step 1: 安装必要的一些系统工具<br>sudo yum install -y yum-utils device-mapper-persistent-data lvm2<br># Step 2: 添加软件源信息<br>sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo<br># Step 3<br>sudo sed -i &#x27;s+download.docker.com+mirrors.aliyun.com/docker-ce+&#x27; /etc/yum.repos.d/docker-ce.repo<br># Step 4: 更新并安装Docker-CE<br>sudo yum makecache fast<br>sudo yum -y install docker-ce<br># Step 4: 开启Docker服务<br>sudo service docker start<br><br># 注意：<br># 官方软件源默认启用了最新的软件，您可以通过编辑软件源的方式获取各个版本的软件包。例如官方并没有将测试版本的软件源置为可用，您可以通过以下方式开启。同理可以开启各种测试版本等。<br># vim /etc/yum.repos.d/docker-ce.repo<br>#   将[docker-ce-test]下方的enabled=0修改为enabled=1<br>#<br># 安装指定版本的Docker-CE:<br># Step 1: 查找Docker-CE的版本:<br># yum list docker-ce.x86_64 --showduplicates | sort -r<br>#   Loading mirror speeds from cached hostfile<br>#   Loaded plugins: branch, fastestmirror, langpacks<br>#   docker-ce.x86_64            17.03.1.ce-1.el7.centos            docker-ce-stable<br>#   docker-ce.x86_64            17.03.1.ce-1.el7.centos            @docker-ce-stable<br>#   docker-ce.x86_64            17.03.0.ce-1.el7.centos            docker-ce-stable<br>#   Available Packages<br># Step2: 安装指定版本的Docker-CE: (VERSION例如上面的17.03.0.ce.1-1.el7.centos)<br># sudo yum -y install docker-ce-[VERSION]<br><br></code></pre></td></tr></table></figure>
+<h1>ssh开启</h1>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">service sshd start<br></code></pre></td></tr></table></figure>
 <p>安装这个去完成配置安装</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo<br></code></pre></td></tr></table></figure>
-
 <p>这个是为docker-ce添加阿里云的源，</p>
 <p>验证</p>
 <p>在</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/etc/yum.repos.d<br></code></pre></td></tr></table></figure>
-
 <p>这里进行检查，</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820211528965.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820211528965.png" alt="image-20230820211528965"></p>
-<h1 id="查询镜像"><a href="#查询镜像" class="headerlink" title="查询镜像"></a>查询镜像</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker search centos<br></code></pre></td></tr></table></figure>
-
+<h1>查询镜像</h1>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker search centos<br></code></pre></td></tr></table></figure>
 <p>查询centos的镜像</p>
-<h2 id="修改镜像源"><a href="#修改镜像源" class="headerlink" title="修改镜像源"></a>修改镜像源</h2><p><a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</a></p>
+<h2 id="修改镜像源"><a href="#修改镜像源" class="headerlink" title="修改镜像源"></a>修改镜像源</h2>
+<p><a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</a></p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820214401482.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820214401482.png" alt="image-20230820214401482"></p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820214347673.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820214347673.png" alt="image-20230820214347673"></p>
 <p>路径在这里</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/etc/docker/daemon.json<br></code></pre></td></tr></table></figure>
-
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker info<br></code></pre></td></tr></table></figure>
-
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820214611513.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820214611513.png" alt="image-20230820214611513"></p>
 <p>在最底下可以看到registry的信息</p>
-<h1 id="安装使用镜像（centos为例）"><a href="#安装使用镜像（centos为例）" class="headerlink" title="安装使用镜像（centos为例）"></a>安装使用镜像（centos为例）</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">docker pull centos<br></code></pre></td></tr></table></figure>
-
+<h1>安装使用镜像（centos为例）</h1>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">docker pull centos<br></code></pre></td></tr></table></figure>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820225309297.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820225309297.png" alt="image-20230820225309297"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker images<br></code></pre></td></tr></table></figure>
-
 <p>查看docker镜像</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820225732948-1692543454147-3.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820225732948-1692543454147-3.png" alt="image-20230820225732948"></p>
 <p>下载时也可以看到dockerhub 官网里面tag值，里面有命令可以直接给出下载</p>
-<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker rmi 5d0da3dc9764<br></code></pre></td></tr></table></figure>
-
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker rmi 5d0da3dc9764<br></code></pre></td></tr></table></figure>
 <p>这个后面是id号就可以了</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820230021842.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820230021842.png" alt="image-20230820230021842"></p>
-<h2 id="修改网段配置"><a href="#修改网段配置" class="headerlink" title="修改网段配置"></a>修改网段配置</h2><p>准备打开一个容器，为了让容器可以上网</p>
+<h2 id="修改网段配置"><a href="#修改网段配置" class="headerlink" title="修改网段配置"></a>修改网段配置</h2>
+<p>准备打开一个容器，为了让容器可以上网</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/sysctl.conf<br></code></pre></td></tr></table></figure>
-
 <p>进行修改</p>
 <p>加上</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">net.ipv4.ip_forward=1<br></code></pre></td></tr></table></figure>
-
 <p>这是开启路由转发的功能</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820231728554.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820231728554.png" alt="image-20230820231728554"></p>
 <p>因为我们容器的ip和物理机ip不在一个网段，所以我们需要跨网段转发</p>
-<h2 id="镜像打包"><a href="#镜像打包" class="headerlink" title="镜像打包"></a>镜像打包</h2><p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820232416704.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820232416704.png" alt="image-20230820232416704"></p>
+<h2 id="镜像打包"><a href="#镜像打包" class="headerlink" title="镜像打包"></a>镜像打包</h2>
+<p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820232416704.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820232416704.png" alt="image-20230820232416704"></p>
 <p>使用</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker save -o +名称（自定）+标签<br></code></pre></td></tr></table></figure>
-
 <p>可以把镜像打包成tar</p>
 <p>然后我们可以进行导入</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820232522349.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230820232522349.png" alt="image-20230820232522349"></p>
 <p>使用</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker load --input centos.tar<br></code></pre></td></tr></table></figure>
-
-<h2 id="创建容器（使用说明）"><a href="#创建容器（使用说明）" class="headerlink" title="创建容器（使用说明）"></a>创建容器（使用说明）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@localhost dr0se]<span class="hljs-comment"># sudo service docker start</span><br>Redirecting to /bin/systemctl start docker.service<br>[root@localhost dr0se]<span class="hljs-comment"># docker container ls</span><br>CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES<br>[root@localhost dr0se]<span class="hljs-comment"># docker images</span><br>REPOSITORY   TAG       IMAGE ID       CREATED         SIZE<br>busybox      latest    beae173ccac6   19 months ago   1.24MB<br>httpd        latest    dabbfbe0c57b   20 months ago   144MB<br>centos       centos7   eeb6ee3f44bd   23 months ago   204MB<br>[root@localhost dr0se]<span class="hljs-comment"># docker create centos:centos7</span><br>3c56b509ab50e2995a4c7bba5dee01986b5ac520317634295e09587d07ac0449<br>[root@localhost dr0se]<span class="hljs-comment"># docker ps</span><br>CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES<br>[root@localhost dr0se]<span class="hljs-comment"># docker ps -a</span><br>CONTAINER ID   IMAGE            COMMAND       CREATED          STATUS    PORTS     NAMES<br>3c56b509ab50   centos:centos7   <span class="hljs-string">&quot;/bin/bash&quot;</span>   13 seconds ago   Created             relaxed_jang<br></code></pre></td></tr></table></figure>
-
+<h2 id="创建容器（使用说明）"><a href="#创建容器（使用说明）" class="headerlink" title="创建容器（使用说明）"></a>创建容器（使用说明）</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@localhost dr0se]<span class="hljs-comment"># sudo service docker start</span><br>Redirecting to /bin/systemctl start docker.service<br>[root@localhost dr0se]<span class="hljs-comment"># docker container ls</span><br>CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES<br>[root@localhost dr0se]<span class="hljs-comment"># docker images</span><br>REPOSITORY   TAG       IMAGE ID       CREATED         SIZE<br>busybox      latest    beae173ccac6   19 months ago   1.24MB<br>httpd        latest    dabbfbe0c57b   20 months ago   144MB<br>centos       centos7   eeb6ee3f44bd   23 months ago   204MB<br>[root@localhost dr0se]<span class="hljs-comment"># docker create centos:centos7</span><br>3c56b509ab50e2995a4c7bba5dee01986b5ac520317634295e09587d07ac0449<br>[root@localhost dr0se]<span class="hljs-comment"># docker ps</span><br>CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES<br>[root@localhost dr0se]<span class="hljs-comment"># docker ps -a</span><br>CONTAINER ID   IMAGE            COMMAND       CREATED          STATUS    PORTS     NAMES<br>3c56b509ab50   centos:centos7   <span class="hljs-string">&quot;/bin/bash&quot;</span>   13 seconds ago   Created             relaxed_jang<br></code></pre></td></tr></table></figure>
 <p>开启长久运行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -i -t --name my_web centos:centos7 /bin/bash<br></code></pre></td></tr></table></figure>
-
 <p>这个容器名字叫mytest</p>
-<h3 id="容器操作"><a href="#容器操作" class="headerlink" title="容器操作"></a>容器操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker ps<br></code></pre></td></tr></table></figure>
-
+<h3 id="容器操作"><a href="#容器操作" class="headerlink" title="容器操作"></a>容器操作</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker ps<br></code></pre></td></tr></table></figure>
 <p>查看存活的docker</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker ps -a<br></code></pre></td></tr></table></figure>
-
 <p>查看所有的docker 的情况</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker start my_web<br></code></pre></td></tr></table></figure>
-
 <p>启动容器</p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">docker pause my_web<br></code></pre></td></tr></table></figure>
-
 <p>暂停容器（不分配资源）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker unpause my_web<br></code></pre></td></tr></table></figure>
-
 <p>解除暂停</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker stop my_web<br></code></pre></td></tr></table></figure>
-
 <p>关闭容器</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker <span class="hljs-built_in">rm</span> my_web<br></code></pre></td></tr></table></figure>
-
 <p>删除容器</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker restart my_web<br></code></pre></td></tr></table></figure>
-
 <p>重启容器</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">docker attach my_web<br></code></pre></td></tr></table></figure>
-
 <p>进入容器（退出时后台停止运行）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker <span class="hljs-built_in">exec</span> -it my_web /bin/bash<br></code></pre></td></tr></table></figure>
-
 <p>进入容器（退出时后台不运行）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">exit</span><br></code></pre></td></tr></table></figure>
-
 <p>退出容器</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -it  -d --name my_web --hostname <span class="hljs-built_in">test</span> centos:centos7 /bin/bash<br></code></pre></td></tr></table></figure>
-
 <p>创建一个容器</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -itd --name my_web -h nginx centos:centos7 /bin/bash<br></code></pre></td></tr></table></figure>
-
 <p>一样的效果</p>
-<h2 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h2><p>现在没有很多常用命令。比如ip a</p>
+<h2 id="配置-2"><a href="#配置" class="headerlink" title="配置"></a>配置</h2>
+<p>现在没有很多常用命令。比如ip a</p>
 <p>我们可以这样处理</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum provides ip<br></code></pre></td></tr></table></figure>
-
 <p>这样可以得到他是哪个软件包</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821134831107.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821134831107.png" alt="image-20230821134831107"></p>
 <p>我们再这样去安装</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">yum install iproute -y<br></code></pre></td></tr></table></figure>
-
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821134904745-1692596945290-1.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821134904745-1692596945290-1.png" alt="image-20230821134904745"></p>
 <p>这样就很完美了</p>
 <p>然后我们需要把nginx的包从主机复制到docker里面</p>
 <p>因为我们需要用到scp命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum install openssh-clients -y<br></code></pre></td></tr></table></figure>
-
 <p>需要安装一下这个玩意</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">scp root@172.17.0.1:/nginx-1.25.2.tar.gz ./<br></code></pre></td></tr></table></figure>
-
 <p>复制成功</p>
 <p>然后我们用</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">tar -zxvf + tar.gz<br></code></pre></td></tr></table></figure>
-
 <p>进行解压</p>
 <p>安装之前我们需要一些提前环境</p>
-<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>有</p>
+<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3>
+<p>有</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gcc openssl openssl-devel pcre-devel zlib zlib-devel <br></code></pre></td></tr></table></figure>
-
-<h3 id="进行安装"><a href="#进行安装" class="headerlink" title="进行安装"></a>进行安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./configure  --prefix=/usr/local/nginx --user=nginx --group=nginx<br></code></pre></td></tr></table></figure>
-
+<h3 id="进行安装"><a href="#进行安装" class="headerlink" title="进行安装"></a>进行安装</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./configure  --prefix=/usr/local/nginx --user=nginx --group=nginx<br></code></pre></td></tr></table></figure>
 <p>安装</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">make<br></code></pre></td></tr></table></figure>
-
 <p>编译</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">make install<br></code></pre></td></tr></table></figure>
-
 <p>编译后安装</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">ln -s /usr/local/nginx/sbin/* /usr/local/sbin<br></code></pre></td></tr></table></figure>
-
 <p>链接</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">useradd nginx<br></code></pre></td></tr></table></figure>
-
 <p>添加用户</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">nginx -t   <br></code></pre></td></tr></table></figure>
-
-
-
-
-
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">nginx<br></code></pre></td></tr></table></figure>
-
 <p>开启</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">ss -anput | grep 80<br></code></pre></td></tr></table></figure>
-
 <p>ss -anput命令的含义是显示所有套接字的统计信息，以数字格式显示IP地址和端口号，并显示与套接字关联的进程信息。</p>
 <p>查看端口服务</p>
 <p>这里我们的nginx就好了</p>
@@ -217,17 +180,15 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <p>就纯属好玩</p>
 <p>回去到主机</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">yum install elinks -y<br></code></pre></td></tr></table></figure>
-
 <p>下载一个elinks浏览器，看起来好看一点</p>
 <p>注意在前面我们的nginx服务已经开启了</p>
 <p>下载elinks只是为了访问</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">elinks http://172.17.0.2<br></code></pre></td></tr></table></figure>
-
 <p>这样就可以了</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821143301069.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821143301069.png" alt="image-20230821143301069"></p>
 <p>我只能说很酷</p>
-<h2 id="容器制作成镜像再次使用"><a href="#容器制作成镜像再次使用" class="headerlink" title="容器制作成镜像再次使用"></a>容器制作成镜像再次使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker commit my_web dr0se/centos-niginx-web<br></code></pre></td></tr></table></figure>
-
+<h2 id="容器制作成镜像再次使用"><a href="#容器制作成镜像再次使用" class="headerlink" title="容器制作成镜像再次使用"></a>容器制作成镜像再次使用</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker commit my_web dr0se/centos-niginx-web<br></code></pre></td></tr></table></figure>
 <p>用commit将我们之前的容器制作为镜像</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821144700739.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821144700739.png" alt="image-20230821144700739"></p>
 <p>可以看到多了一个，还挺大</p>
@@ -238,7 +199,9 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <p>elinks打开</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821144826335.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821144826335.png" alt="image-20230821144826335"></p>
 <p>一摸一样</p>
-<h1 id="namespace"><a href="#namespace" class="headerlink" title="namespace"></a>namespace</h1><h2 id="ipc隔离"><a href="#ipc隔离" class="headerlink" title="ipc隔离"></a>ipc隔离</h2><p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821213016513.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821213016513.png" alt="image-20230821213016513"></p>
+<h1>namespace</h1>
+<h2 id="ipc隔离"><a href="#ipc隔离" class="headerlink" title="ipc隔离"></a>ipc隔离</h2>
+<p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821213016513.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821213016513.png" alt="image-20230821213016513"></p>
 <p>proc路径里面可以找到所有pid编号</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821213209543.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230821213209543.png" alt="image-20230821213209543"></p>
 <p>这里可以看到ns里面的pid编号</p>
@@ -249,93 +212,87 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <p>MNT:挂载点，文件系统</p>
 <p>USER：用户和组</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _GNU_SOURCE</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sys/types.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sched.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sched.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;signal.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;unistd.h&gt;</span></span><br><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> STACK_SIZE(1024 * 1024)</span><br><br><span class="hljs-type">static</span> <span class="hljs-type">char</span> child_stack[STACK_SIZE];<br><br><span class="hljs-type">char</span> *<span class="hljs-type">const</span> child_args[] = &#123;<br>    <span class="hljs-string">&quot;bin/bash&quot;</span>,<br>    <span class="hljs-literal">NULL</span>&#125;;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">child_main</span><span class="hljs-params">(<span class="hljs-type">void</span> args)</span><br>&#123;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;在子进程中！\n&quot;</span>);<br>    execv(child_args[<span class="hljs-number">0</span>], child_args);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;程序开始：\n&quot;</span>);<br>    <span class="hljs-type">int</span> child_pid = clone(child_main, child_stack + STACK_SIZE, SIGCHLD, <span class="hljs-literal">NULL</span>);<br>    waitpid(child_pid, <span class="hljs-literal">NULL</span>, <span class="hljs-number">0</span>);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;已退出\n&quot;</span>);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 <p>这里很复杂</p>
 <p>需要隔离就是 在</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">int child_pid = clone(child_main, child_stack + STACK_SIZE, SIGCHLD, NULL);这句话<br></code></pre></td></tr></table></figure>
-
 <p>里面加入</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">int child_pid = clone(child_main, child_stack + STACK_SIZE,CLONE_NEWIPC | SIGCHLD, NULL);<br></code></pre></td></tr></table></figure>
-
 <p>进行IPC隔离</p>
 <p>理解一下</p>
 <p>上面的c程序是创建了一个新的进程，如果不加CLONE_NEWIPC,两边的信号可能就会起冲突</p>
 <p>IPC:信号量，消息列队，共享内存</p>
 <p>加上了后，会创建一个新的ipc，问题就不大了</p>
-<h2 id="pid隔离"><a href="#pid隔离" class="headerlink" title="pid隔离"></a>pid隔离</h2><p>同样的</p>
+<h2 id="pid隔离"><a href="#pid隔离" class="headerlink" title="pid隔离"></a>pid隔离</h2>
+<p>同样的</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">int child_pid = clone(child_main, child_stack + STACK_SIZE,CLONE_NEWIPC | CLONE_NEWPID | SIGCHLD, NULL);<br></code></pre></td></tr></table></figure>
-
 <p>进行隔离，但是没有用，只是有了一个新的pid编号，但是文件系统并没有被隔离（也就是proc目录 ）</p>
 <p>操作还是会影响物理机没有完全隔离</p>
-<h2 id="proc（ns）隔离也叫mnt隔离"><a href="#proc（ns）隔离也叫mnt隔离" class="headerlink" title="proc（ns）隔离也叫mnt隔离"></a>proc（ns）隔离也叫mnt隔离</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">int child_pid = clone(child_main, child_stack + STACK_SIZE,CLONE_NEWIPC | CLONE_NEWPID | CLONE_NEWNS | SIGCHLD, NULL);<br></code></pre></td></tr></table></figure>
-
+<h2 id="proc（ns）隔离也叫mnt隔离"><a href="#proc（ns）隔离也叫mnt隔离" class="headerlink" title="proc（ns）隔离也叫mnt隔离"></a>proc（ns）隔离也叫mnt隔离</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">int child_pid = clone(child_main, child_stack + STACK_SIZE,CLONE_NEWIPC | CLONE_NEWPID | CLONE_NEWNS | SIGCHLD, NULL);<br></code></pre></td></tr></table></figure>
 <p>先是这里进行隔离</p>
 <p>这里pid编号会变，但是文件系统还是不会变</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">mount --make-private -t proc proc /proc/<br></code></pre></td></tr></table></figure>
-
 <p>独立物理机的proc</p>
 <p>再去子进程</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">mount --make-private -t proc /proc/<br></code></pre></td></tr></table></figure>
-
 <p>就可以进行独立</p>
 <p>但是还有一个问题，就是最牛的父进程也就是1号进程他没有确定</p>
 <p>所以我们可以提权</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -itd --name my_test --privileged centos:7 /sbin/init<br></code></pre></td></tr></table></figure>
-
-<p>创建docker时给与提权，原理是链接到了&#x2F;sbin&#x2F;init</p>
-<h2 id="网络隔离"><a href="#网络隔离" class="headerlink" title="网络隔离"></a>网络隔离</h2><h1 id="Cgroup"><a href="#Cgroup" class="headerlink" title="Cgroup"></a>Cgroup</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">yum install libcgroup-tools -y<br></code></pre></td></tr></table></figure>
-
+<p>创建docker时给与提权，原理是链接到了/sbin/init</p>
+<h2 id="网络隔离"><a href="#网络隔离" class="headerlink" title="网络隔离"></a>网络隔离</h2>
+<h1>Cgroup</h1>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">yum install libcgroup-tools -y<br></code></pre></td></tr></table></figure>
 <p>安装工具</p>
 <p>Cgroups 是 control groups 的缩写，是 Linux 内核提供的一种可以限制、记录、隔离进程组（process groups）所使用的物理资源（如 CPU、Memory、IO 等等）的机制。</p>
 <p>Cgroups 和 Namespace 类似，也是将进程进行分组，但它的目的和 Namespace 不一 样，Namespace 是为了隔离进程组之间的资源，而 Cgroups 是为了对一组进程进行统一的资源监控和限制。</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230822115806149.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230822115806149.png" alt="image-20230822115806149"></p>
-<h1 id="docker的框架结构"><a href="#docker的框架结构" class="headerlink" title="docker的框架结构"></a>docker的框架结构</h1><p>![屏幕截图 2023-08-23 113905](docker学习笔记&#x2F;屏幕截图 2023-08-23 113905.png)</p>
+<h1>docker的框架结构</h1>
+<p>![屏幕截图 2023-08-23 113905](docker学习笔记/屏幕截图 2023-08-23 113905.png)</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230823114119525.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230823114119525.png" alt="image-20230823114119525"></p>
-<h1 id="docker镜像的分层与制作"><a href="#docker镜像的分层与制作" class="headerlink" title="docker镜像的分层与制作"></a>docker镜像的分层与制作</h1><p>base image:不依赖其他镜像，可以作为其他镜像的基础，比如ubuntu centos </p>
+<h1>docker镜像的分层与制作</h1>
+<p>base image:不依赖其他镜像，可以作为其他镜像的基础，比如ubuntu centos</p>
 <p>为什么一个docker里面的镜像这么小</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker images<br></code></pre></td></tr></table></figure>
-
 <p>看到的是rootfs里面的东西的大小</p>
 <p>分两部分</p>
 <p>一个是</p>
-<p>rootfs：这里面就是基本文件目录，&#x2F;dev之类的</p>
+<p>rootfs：这里面就是基本文件目录，/dev之类的</p>
 <p>bootfs kernel ：内核，用好了就没了删除，公用</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">docker history<br></code></pre></td></tr></table></figure>
-
 <p>可以查看层数，docker分层</p>
 <p>容器只能使用主机的内核，不能修改</p>
-<h1 id="dockerfile镜像制作"><a href="#dockerfile镜像制作" class="headerlink" title="dockerfile镜像制作"></a>dockerfile镜像制作</h1><p>知识有很多，我只记录用的最多的</p>
+<h1>dockerfile镜像制作</h1>
+<p>知识有很多，我只记录用的最多的</p>
 <p>做一个镜像第一步是Dockerfile的编写</p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile"><span class="hljs-keyword">FROM</span> centos:<span class="hljs-number">7</span><br><span class="hljs-keyword">RUN</span><span class="language-bash"> yum install net-tools -y</span><br><span class="hljs-keyword">RUN</span><span class="language-bash"> yum install httpd -y</span><br><span class="hljs-keyword">RUN</span><span class="language-bash"> yum install elinks -y</span><br><span class="hljs-keyword">CMD</span><span class="language-bash"> [<span class="hljs-string">&quot;/bin/bash&quot;</span>]</span><br></code></pre></td></tr></table></figure>
-
 <p>一个基础镜像拉取，三个软件，网络，apache，浏览器elinks，bash命令集</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker build -t centest/centos-httpd-net ./<br></code></pre></td></tr></table></figure>
-
 <p>制作，名称加Dockerfile所在的路径，就创建好嘞一个镜像</p>
-<h1 id="Registry私有仓库"><a href="#Registry私有仓库" class="headerlink" title="Registry私有仓库"></a>Registry私有仓库</h1><h1 id="docker状态切换"><a href="#docker状态切换" class="headerlink" title="docker状态切换"></a>docker状态切换</h1><p>![屏幕截图 2023-09-04 175841](docker学习笔记&#x2F;屏幕截图 2023-09-04 175841.png)</p>
-<h1 id="docker原生网络bridge网络"><a href="#docker原生网络bridge网络" class="headerlink" title="docker原生网络bridge网络"></a>docker原生网络bridge网络</h1><p>none网络，度，独立性强，安全性高</p>
-<p>host网络，复制主机网络，性能好，但是灵活性差吗 </p>
+<h1>Registry私有仓库</h1>
+<h1>docker状态切换</h1>
+<p>![屏幕截图 2023-09-04 175841](docker学习笔记/屏幕截图 2023-09-04 175841.png)</p>
+<h1>docker原生网络bridge网络</h1>
+<p>none网络，度，独立性强，安全性高</p>
+<p>host网络，复制主机网络，性能好，但是灵活性差吗</p>
 <p>join网络，两个容器使用相同的网络</p>
-<p> 网络通讯底层要求：一个网段&#x3D;一个广播域&#x3D;一个vlan中</p>
-<p>![屏幕截图 2023-09-05 163213](docker学习笔记&#x2F;屏幕截图 2023-09-05 163213-1693908070913-3.png)</p>
+<p>网络通讯底层要求：一个网段=一个广播域=一个vlan中</p>
+<p>![屏幕截图 2023-09-05 163213](docker学习笔记/屏幕截图 2023-09-05 163213-1693908070913-3.png)</p>
 <p>docker原生的网络有这些</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905163925823.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905163925823.png" alt="image-20230905163925823"></p>
 <p>先看看none类型</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -it --name bnone --network none busybox sh<br></code></pre></td></tr></table></figure>
-
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905164455679.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905164455679.png" alt="image-20230905164455679"></p>
 <p>我利用busybox创造了一个none网络类型的容器，名字是bnone</p>
 <p>可以看到他只有回环地址</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker network inspect  none<br></code></pre></td></tr></table></figure>
-
-<p>![屏幕截图 2023-09-05 164741](docker学习笔记&#x2F;屏幕截图 2023-09-05 164741.png)</p>
+<p>![屏幕截图 2023-09-05 164741](docker学习笔记/屏幕截图 2023-09-05 164741.png)</p>
 <p>可以看到</p>
 <p>IPAM里面是什么都没有的</p>
 <p>我们可以理解一下，这个不通外网的小容器功能性不强，但是是一个安全的密闭的小盒子，可以做很多安全性问题，比如独立生成密码，二维码，动态验证码，这样就不会被影响</p>
 <p>接下来看看host模式，先看看我的网卡信息</p>
-<p>![屏幕截图 2023-09-05 165005](docker学习笔记&#x2F;屏幕截图 2023-09-05 165005.png)</p>
+<p>![屏幕截图 2023-09-05 165005](docker学习笔记/屏幕截图 2023-09-05 165005.png)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -it --name bhost --network host busybox sh<br></code></pre></td></tr></table></figure>
-
 <p>和none类型一样去创建一个新的容器。</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905165131833.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905165131833.png" alt="image-20230905165131833"></p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905165140402.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905165140402.png" alt="image-20230905165140402"></p>
@@ -347,23 +304,21 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <p>这里可以看到我创建了一个apache的服务</p>
 <p>没有ifconfig之类的命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -it --network container:httpd --<span class="hljs-built_in">rm</span> busybox sh<br></code></pre></td></tr></table></figure>
-
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905171939811.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905171939811.png" alt="image-20230905171939811"></p>
 <p>这里我们join httpd</p>
 <p>我们的busybox可以看到httpd的ip地址，因为busybox使用了httpd的网络栈</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这三种模式各有特点，none只保留了回环，host共享主机，特别的join是使用别的容器的网络</p>
-<h2 id="bridge网络"><a href="#bridge网络" class="headerlink" title="bridge网络"></a>bridge网络</h2><p>先看两个命令</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>
+<p>这三种模式各有特点，none只保留了回环，host共享主机，特别的join是使用别的容器的网络</p>
+<h2 id="bridge网络"><a href="#bridge网络" class="headerlink" title="bridge网络"></a>bridge网络</h2>
+<p>先看两个命令</p>
 <p>这个命令可以看到网桥信息</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">brctl show<br></code></pre></td></tr></table></figure>
-
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905173149735.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905173149735.png" alt="image-20230905173149735"></p>
 <p>这个命令可以看到网络信息</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905173444523.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905173444523.png" alt="image-20230905173444523"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -itd --network bridge --name brbox busybox sh<br></code></pre></td></tr></table></figure>
-
 <p>我们利用bridge网络创造一个叫brbox的容器</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker <span class="hljs-built_in">exec</span> -it brbox sh<br></code></pre></td></tr></table></figure>
-
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905173837719.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905173837719.png" alt="image-20230905173837719"></p>
 <p>看到ip是什么</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905173920014.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905173920014.png" alt="image-20230905173920014"></p>
@@ -379,53 +334,46 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <p>从容器角度看</p>
 <p>容器的eth0-&gt;连到主机的51号网卡-&gt;docker0</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">51: veth74ef2ef<br></code></pre></td></tr></table></figure>
-
 <p>主机51号网卡虽然和docker0不在同一网段但是有路由转发</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905174615581.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230905174615581.png" alt="image-20230905174615581"></p>
 <p>就是这样</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sysctl -p<br></code></pre></td></tr></table></figure>
-
 <p>查看，是1就开启了0就没开</p>
 <p>临时生效：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">echo <span class="hljs-string">&quot;1&quot;</span> &gt; /proc/sys/net/ipv4/ip_forward<br></code></pre></td></tr></table></figure>
-
-<p>永久生效的话，需要修改 &#x2F;etc&#x2F;sysctl.conf：</p>
+<p>永久生效的话，需要修改 /etc/sysctl.conf：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">net.ipv4.ip_forward = <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
-
 <p>执行sysctl -p马上生效</p>
 <p>这就是bridge网络</p>
 <p>我们也可以</p>
-<h2 id="自定义网络"><a href="#自定义网络" class="headerlink" title="自定义网络"></a>自定义网络</h2><p>不指定网络驱动时默认创建的bridge网络</p>
+<h2 id="自定义网络"><a href="#自定义网络" class="headerlink" title="自定义网络"></a>自定义网络</h2>
+<p>不指定网络驱动时默认创建的bridge网络</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">docker network create default_network<br></code></pre></td></tr></table></figure>
-
 <p>查看网络内部信息</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">docker network inspect default_network<br></code></pre></td></tr></table></figure>
-
 <p>列所有列表的网络</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">docker network ls<br></code></pre></td></tr></table></figure>
-
 <p>移除指定的网络</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">docker network rm default_network<br></code></pre></td></tr></table></figure>
-
 <p>查看网络内部信息：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">docker network inspect default_network<br></code></pre></td></tr></table></figure>
-
 <p>自定义创建</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">docker network create -d bridge mynet1 <br></code></pre></td></tr></table></figure>
-
 <p>默认是bridge，但是我加其他的比如none，host都没有成功</p>
 <p>大概docker网络知识我学到的是这些</p>
-<h1 id="容器存储"><a href="#容器存储" class="headerlink" title="容器存储"></a>容器存储</h1><p>tmpfs mounts:存放都在HOST内存中</p>
+<h1>容器存储</h1>
+<p>tmpfs mounts:存放都在HOST内存中</p>
 <p>bind mount: HOST挂载到容器中</p>
 <p>managed volume:把容器内的目录持久化到HOST到指定目录</p>
-<h2 id="tmpfs"><a href="#tmpfs" class="headerlink" title="tmpfs"></a>tmpfs</h2><p>好像是指定目录到了主机内存中</p>
+<h2 id="tmpfs"><a href="#tmpfs" class="headerlink" title="tmpfs"></a>tmpfs</h2>
+<p>好像是指定目录到了主机内存中</p>
 <p class='item-img' data-src='/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230908144425371.png'><img src="/2023/08/15/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230908144425371.png" alt="image-20230908144425371"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">docker run -itd --name tmpfs --tmpfs /app busybox<br></code></pre></td></tr></table></figure>
-
 <p>里面的app目录下面的东西就全部加载进了主机的内存中。我也看不出有什么用</p>
 <p>查了一下百度得到的结果是可以提高读取速度，因为是直接进到内存中。tmpfs最大的存储空间可达（The size of RM + The size ofSwap）</p>
-<h2 id="bind"><a href="#bind" class="headerlink" title="bind"></a>bind</h2><p>就是主机host和容器找了一个文件进行绑定，修改了一个就可以对另一个进行修改</p>
-<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2023/09/16/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/">← Next 权限提升</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2023/08/14/python%E7%88%AC%E8%99%AB/">python爬虫 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧</a><a id="to-index" href="#toc-div" title="To Catalog">≡</a><a id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">Dr0se</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DOCKER%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">DOCKER安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh%E9%85%8D%E7%BD%AE"><span class="toc-number">1.1.</span> <span class="toc-text">ssh配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5"><span class="toc-number">1.2.</span> <span class="toc-text">检查</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E6%A3%80%E6%9F%A5"><span class="toc-number">1.2.1.</span> <span class="toc-text">版本检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E6%A0%B8%E6%A3%80%E6%9F%A5"><span class="toc-number">1.2.2.</span> <span class="toc-text">内核检查</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.</span> <span class="toc-text">配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ssh%E5%BC%80%E5%90%AF"><span class="toc-number">2.</span> <span class="toc-text">ssh开启</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E9%95%9C%E5%83%8F"><span class="toc-number">3.</span> <span class="toc-text">查询镜像</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E9%95%9C%E5%83%8F%E6%BA%90"><span class="toc-number">3.1.</span> <span class="toc-text">修改镜像源</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%95%9C%E5%83%8F%EF%BC%88centos%E4%B8%BA%E4%BE%8B%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">安装使用镜像（centos为例）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">4.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-number">4.2.</span> <span class="toc-text">删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E7%BD%91%E6%AE%B5%E9%85%8D%E7%BD%AE"><span class="toc-number">4.3.</span> <span class="toc-text">修改网段配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%95%9C%E5%83%8F%E6%89%93%E5%8C%85"><span class="toc-number">4.4.</span> <span class="toc-text">镜像打包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8%EF%BC%88%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%EF%BC%89"><span class="toc-number">4.5.</span> <span class="toc-text">创建容器（使用说明）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E6%93%8D%E4%BD%9C"><span class="toc-number">4.5.1.</span> <span class="toc-text">容器操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-1"><span class="toc-number">4.6.</span> <span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83"><span class="toc-number">4.6.1.</span> <span class="toc-text">环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85"><span class="toc-number">4.6.2.</span> <span class="toc-text">进行安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E5%88%B6%E4%BD%9C%E6%88%90%E9%95%9C%E5%83%8F%E5%86%8D%E6%AC%A1%E4%BD%BF%E7%94%A8"><span class="toc-number">4.7.</span> <span class="toc-text">容器制作成镜像再次使用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#namespace"><span class="toc-number">5.</span> <span class="toc-text">namespace</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ipc%E9%9A%94%E7%A6%BB"><span class="toc-number">5.1.</span> <span class="toc-text">ipc隔离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pid%E9%9A%94%E7%A6%BB"><span class="toc-number">5.2.</span> <span class="toc-text">pid隔离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#proc%EF%BC%88ns%EF%BC%89%E9%9A%94%E7%A6%BB%E4%B9%9F%E5%8F%ABmnt%E9%9A%94%E7%A6%BB"><span class="toc-number">5.3.</span> <span class="toc-text">proc（ns）隔离也叫mnt隔离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E9%9A%94%E7%A6%BB"><span class="toc-number">5.4.</span> <span class="toc-text">网络隔离</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Cgroup"><span class="toc-number">6.</span> <span class="toc-text">Cgroup</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker%E7%9A%84%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84"><span class="toc-number">7.</span> <span class="toc-text">docker的框架结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker%E9%95%9C%E5%83%8F%E7%9A%84%E5%88%86%E5%B1%82%E4%B8%8E%E5%88%B6%E4%BD%9C"><span class="toc-number">8.</span> <span class="toc-text">docker镜像的分层与制作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dockerfile%E9%95%9C%E5%83%8F%E5%88%B6%E4%BD%9C"><span class="toc-number">9.</span> <span class="toc-text">dockerfile镜像制作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Registry%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93"><span class="toc-number">10.</span> <span class="toc-text">Registry私有仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker%E7%8A%B6%E6%80%81%E5%88%87%E6%8D%A2"><span class="toc-number">11.</span> <span class="toc-text">docker状态切换</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker%E5%8E%9F%E7%94%9F%E7%BD%91%E7%BB%9Cbridge%E7%BD%91%E7%BB%9C"><span class="toc-number">12.</span> <span class="toc-text">docker原生网络bridge网络</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">12.1.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bridge%E7%BD%91%E7%BB%9C"><span class="toc-number">12.2.</span> <span class="toc-text">bridge网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BD%91%E7%BB%9C"><span class="toc-number">12.3.</span> <span class="toc-text">自定义网络</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E5%AD%98%E5%82%A8"><span class="toc-number">13.</span> <span class="toc-text">容器存储</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#tmpfs"><span class="toc-number">13.1.</span> <span class="toc-text">tmpfs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bind"><span class="toc-number">13.2.</span> <span class="toc-text">bind</span></a></li></ol></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {code.findCode();
+<h2 id="bind"><a href="#bind" class="headerlink" title="bind"></a>bind</h2>
+<p>就是主机host和容器找了一个文件进行绑定，修改了一个就可以对另一个进行修改</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2023/09/16/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/">← Next 权限提升</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2023/08/14/python%E7%88%AC%E8%99%AB/">python爬虫 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a id="to-index" href="#toc-div" title="文章目录">≡</a><a id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">Dr0se</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">DOCKER安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh%E9%85%8D%E7%BD%AE"><span class="toc-number">1.1.</span> <span class="toc-text">ssh配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5"><span class="toc-number">1.2.</span> <span class="toc-text">检查</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E6%A3%80%E6%9F%A5"><span class="toc-number">1.2.1.</span> <span class="toc-text">版本检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E6%A0%B8%E6%A3%80%E6%9F%A5"><span class="toc-number">1.2.2.</span> <span class="toc-text">内核检查</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.</span> <span class="toc-text">配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">ssh开启</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">查询镜像</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E9%95%9C%E5%83%8F%E6%BA%90"><span class="toc-number">3.1.</span> <span class="toc-text">修改镜像源</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">安装使用镜像（centos为例）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">4.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-number">4.2.</span> <span class="toc-text">删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E7%BD%91%E6%AE%B5%E9%85%8D%E7%BD%AE"><span class="toc-number">4.3.</span> <span class="toc-text">修改网段配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%95%9C%E5%83%8F%E6%89%93%E5%8C%85"><span class="toc-number">4.4.</span> <span class="toc-text">镜像打包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8%EF%BC%88%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%EF%BC%89"><span class="toc-number">4.5.</span> <span class="toc-text">创建容器（使用说明）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E6%93%8D%E4%BD%9C"><span class="toc-number">4.5.1.</span> <span class="toc-text">容器操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-2"><span class="toc-number">4.6.</span> <span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83"><span class="toc-number">4.6.1.</span> <span class="toc-text">环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85"><span class="toc-number">4.6.2.</span> <span class="toc-text">进行安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E5%88%B6%E4%BD%9C%E6%88%90%E9%95%9C%E5%83%8F%E5%86%8D%E6%AC%A1%E4%BD%BF%E7%94%A8"><span class="toc-number">4.7.</span> <span class="toc-text">容器制作成镜像再次使用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">namespace</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ipc%E9%9A%94%E7%A6%BB"><span class="toc-number">5.1.</span> <span class="toc-text">ipc隔离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pid%E9%9A%94%E7%A6%BB"><span class="toc-number">5.2.</span> <span class="toc-text">pid隔离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#proc%EF%BC%88ns%EF%BC%89%E9%9A%94%E7%A6%BB%E4%B9%9F%E5%8F%ABmnt%E9%9A%94%E7%A6%BB"><span class="toc-number">5.3.</span> <span class="toc-text">proc（ns）隔离也叫mnt隔离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E9%9A%94%E7%A6%BB"><span class="toc-number">5.4.</span> <span class="toc-text">网络隔离</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">Cgroup</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">docker的框架结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">8.</span> <span class="toc-text">docker镜像的分层与制作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">9.</span> <span class="toc-text">dockerfile镜像制作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">10.</span> <span class="toc-text">Registry私有仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">11.</span> <span class="toc-text">docker状态切换</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">12.</span> <span class="toc-text">docker原生网络bridge网络</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">12.1.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bridge%E7%BD%91%E7%BB%9C"><span class="toc-number">12.2.</span> <span class="toc-text">bridge网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BD%91%E7%BB%9C"><span class="toc-number">12.3.</span> <span class="toc-text">自定义网络</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">13.</span> <span class="toc-text">容器存储</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#tmpfs"><span class="toc-number">13.1.</span> <span class="toc-text">tmpfs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bind"><span class="toc-number">13.2.</span> <span class="toc-text">bind</span></a></li></ol></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {code.findCode();
 document.querySelector('.lg-container')?.remove()
 lightGallery(document.getElementById('post-bg'), {
   plugins: [lgZoom,lgThumbnail],
