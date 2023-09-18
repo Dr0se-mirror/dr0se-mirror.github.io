@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="ch" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>蓝队监控溯源手法随笔 | Hexo</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":true,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy","copyFinish":"copied","expand":"expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/brands.min.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/fontawesome.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+@font-face {
+ font-family: 'Font Awesome 6 Brands';
+ src: local('Font Awesome 6 Brands'), url('/lib/fontawesome/fa-brands.woff2') format('woff2');
+}
+@font-face {
+ font-family: 'Font Awesome 6 Free';
+ src: local('Font Awesome 6 Free'), url('/lib/fontawesome/fa-regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+  --light-background: url('/img/bk.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn hide"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>蓝队监控溯源手法随笔</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2023-09-18T00:59:52.000Z" id="date"> 2023-09-18</time></div></span><br><span>Last Update: <div class="control"><time datetime="2023-09-18T03:39:44.994Z" id="updated"> 2023-09-18</time></div></span></div></div><hr><div id="post-content"><h1>监控</h1>
+<p>监控也就是监控安全设备的告警，从海量日志中筛选出漏报、误报以及发现真实的攻击者；</p>
+<p>一般来说，想要快速攻击，在海量资产中进行准确的找到攻击，最简单的手法就是使用扫描器。懂点渗透就知道扫描绝对是必不可少的。</p>
+<p>所以掌握开源的或者商业的常用的扫描器的指纹特征，非常重要。</p>
+<p>注：指纹特征的提取一般就是基于http请求包，或者响应包。市面上的扫描器一般都可以看包</p>
+<h2 id="扫描器"><a href="#扫描器" class="headerlink" title="扫描器"></a>扫描器</h2>
+<h3 id="Crawlergo"><a href="#Crawlergo" class="headerlink" title="Crawlergo"></a>Crawlergo</h3>
+<p>这个是360天相的爬虫模块。开源的！（<a target="_blank" rel="noopener" href="https://github.com/0Kee-Team/crawlergo%EF%BC%89">https://github.com/0Kee-Team/crawlergo）</a></p>
+<p>如果有人二开crawlergo或者就是使用了360扫描器一般http头就会有这个特征：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">Spider-Name: crawlergo<br></code></pre></td></tr></table></figure>
+<p class='item-img' data-src='/2023/09/18/%E6%BA%AF%E6%BA%90%E6%89%8B%E6%B3%95%E9%9A%8F%E7%AC%94/640.png'><img src="/2023/09/18/%E6%BA%AF%E6%BA%90%E6%89%8B%E6%B3%95%E9%9A%8F%E7%AC%94/640.png" alt="https://mmbiz.qpic.cn/mmbiz_png/pOGBCic4vYicZB2OIpyicQEVm79NSPcaq1s54ibibXcEEByPt9FWicCHagrOiawgiauZmRoKfNhNlcicOIfE0BfJe69ommg/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1"></p>
+<h3 id="AWVS"><a href="#AWVS" class="headerlink" title="AWVS"></a>AWVS</h3>
+<p>这个很常见。</p>
+<p>白帽子使用 AWVS 扫描器对企业资产进行扫描时，HTTP 请求包和响应包中都存在有特征。</p>
+<p>（1） Accept:acunetix/wvs</p>
+<p class='item-img' data-src='/2023/09/18/%E6%BA%AF%E6%BA%90%E6%89%8B%E6%B3%95%E9%9A%8F%E7%AC%94/640-16950017470712.png'><img src="/2023/09/18/%E6%BA%AF%E6%BA%90%E6%89%8B%E6%B3%95%E9%9A%8F%E7%AC%94/640-16950017470712.png" alt="图片"></p>
+<p>（2） HTTP 请求头存在 Acunetix-* 的自定义字段</p>
+<p class='item-img' data-src='/2023/09/18/%E6%BA%AF%E6%BA%90%E6%89%8B%E6%B3%95%E9%9A%8F%E7%AC%94/640-16950017470713.png'><img src="/2023/09/18/%E6%BA%AF%E6%BA%90%E6%89%8B%E6%B3%95%E9%9A%8F%E7%AC%94/640-16950017470713.png" alt="图片"></p>
+<p>（3） HTTP 请求包或者响应包中包含 hit*.bxss.me</p>
+<p class='item-img' data-src='/2023/09/18/%E6%BA%AF%E6%BA%90%E6%89%8B%E6%B3%95%E9%9A%8F%E7%AC%94/640-16950017470714.png'><img src="/2023/09/18/%E6%BA%AF%E6%BA%90%E6%89%8B%E6%B3%95%E9%9A%8F%E7%AC%94/640-16950017470714.png" alt="图片"></p>
+<p>AWVS 在进行无回显漏洞探测时候会使用到 DNSLog（<a target="_blank" rel="noopener" href="http://bxss.me">bxss.me</a>），DNSLog 生成规则为 “<a target="_blank" rel="noopener" href="http://hit">http://hit</a>” + rndToken + ‘.bxss.me/’ 随机的三级域名作为 payload。</p>
+<h3 id="DNSlog"><a href="#DNSlog" class="headerlink" title="DNSlog"></a>DNSlog</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">http://www.dnslog.cn/<br></code></pre></td></tr></table></figure>
+<p>如果发现攻击者使用 DNSLog 攻击业务系统，可以使用如下脚本对 DNSLog 平台发送数据包，通过修改 URL 参数的值诱导攻击者到蜜罐上。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">#!/usr/bin/env python<br># -*- coding: utf-8 -*-<br>import requests<br>import random<br>import time<br>def atttack():<br>    for i in range(1, 1000):<br>        random_name_id = random.randint(3,8)<br>        random_name = &#x27;&#x27;.join(random.sample([&#x27;z&#x27;,&#x27;y&#x27;,&#x27;x&#x27;,&#x27;w&#x27;,&#x27;v&#x27;,&#x27;u&#x27;,&#x27;t&#x27;,&#x27;s&#x27;,&#x27;r&#x27;,&#x27;q&#x27;,&#x27;p&#x27;,&#x27;o&#x27;,&#x27;n&#x27;,&#x27;m&#x27;,&#x27;l&#x27;,&#x27;k&#x27;,&#x27;j&#x27;,&#x27;i&#x27;,&#x27;h&#x27;,&#x27;g&#x27;,&#x27;f&#x27;,&#x27;e&#x27;,&#x27;d&#x27;,&#x27;c&#x27;,&#x27;b&#x27;,&#x27;a&#x27;], random_name_id))<br>        random_id = random.randint(1,100)<br>        url = &quot;http://&quot; + str(random_id) + &quot;.&quot; + str(random_name) + &quot;.4ymeeo.dnslog.cn/Exploit&quot;<br>        print(url)<br>        response = requests.get(url,timeout=5)<br>        print(response.text)<br>if __name__ == &#x27;__main__&#x27;:<br>    atttack()<br></code></pre></td></tr></table></figure>
+<h3 id="HTTP-返回包"><a href="#HTTP-返回包" class="headerlink" title="HTTP-返回包"></a>HTTP 返回包</h3>
+<p>攻击者通过利用远程命令执行类漏洞或者 webshell 执行一些命令后，返回包中会返回命令的执行结果，这里抛砖引玉说几个返回的包含的特征，如果存在以下特征说明已经漏洞利用成功。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">(1) “Windows IP”<br><br>(2) “Microsoft Corporation”<br><br>(3) “drwxr--r--”/ “-rwxr-xr-x”<br></code></pre></td></tr></table></figure>
+<h2 id="REFERER"><a href="#REFERER" class="headerlink" title="REFERER"></a>REFERER</h2>
+<p>这个思路我倒是没有想到过。如果攻击者从fofa上面来，referer就是fofa.info.这也不失为一个信息</p>
+<p>类似的搜索引擎还有 Google、ZoomEye、<a target="_blank" rel="noopener" href="http://shodan.io">shodan.io</a>、Baidu、Censys。</p>
+<h1>溯源思路</h1>
+<h2 id="可以溯源的部分"><a href="#可以溯源的部分" class="headerlink" title="可以溯源的部分"></a>可以溯源的部分</h2>
+<p class='item-img' data-src='/2023/09/18/%E6%BA%AF%E6%BA%90%E6%89%8B%E6%B3%95%E9%9A%8F%E7%AC%94/640-16950048771408.png'><img src="/2023/09/18/%E6%BA%AF%E6%BA%90%E6%89%8B%E6%B3%95%E9%9A%8F%E7%AC%94/640-16950048771408.png" alt="https://mmbiz.qpic.cn/mmbiz_png/pOGBCic4vYicZqxO5JMB14lDTuU9UlCiaY3MKypZOsN4svicWPrmKfbuicaqsx5QJFcZ5L5iacs2wttn4ic0dhibI34W8Q/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1"></p>
+<h2 id="回溯关键点"><a href="#回溯关键点" class="headerlink" title="回溯关键点"></a>回溯关键点</h2>
+<p>攻击分类：漏洞利用的数据包特点：字符串格式，特殊字符串（一般来说现在的势态感知系统都会标出来是什么攻击）</p>
+<p>攻击者信息：攻击者使用漏洞利用工具，请求包可能会有残留的公司或个人信息</p>
+<p class='item-img' data-src='/2023/09/18/%E6%BA%AF%E6%BA%90%E6%89%8B%E6%B3%95%E9%9A%8F%E7%AC%94/640-169500709200010.png'><img src="/2023/09/18/%E6%BA%AF%E6%BA%90%E6%89%8B%E6%B3%95%E9%9A%8F%E7%AC%94/640-169500709200010.png" alt="https://mmbiz.qpic.cn/mmbiz_png/pOGBCic4vYicZqxO5JMB14lDTuU9UlCiaY3mtdaSjJZCjLBQRYg5d43qYhm8SRmXvCO3ic8o4r7xlhKLL4ibxQjvYXQ/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1"></p>
+<h2 id="钓鱼邮件溯源方式"><a href="#钓鱼邮件溯源方式" class="headerlink" title="钓鱼邮件溯源方式"></a>钓鱼邮件溯源方式</h2>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-end"><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2023/09/16/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/">权限提升 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧</a><a id="to-index" href="#toc-div" title="To Catalog">≡</a><a id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">Dr0se</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">监控</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%AB%E6%8F%8F%E5%99%A8"><span class="toc-number">1.1.</span> <span class="toc-text">扫描器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Crawlergo"><span class="toc-number">1.1.1.</span> <span class="toc-text">Crawlergo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AWVS"><span class="toc-number">1.1.2.</span> <span class="toc-text">AWVS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DNSlog"><span class="toc-number">1.1.3.</span> <span class="toc-text">DNSlog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP-%E8%BF%94%E5%9B%9E%E5%8C%85"><span class="toc-number">1.1.4.</span> <span class="toc-text">HTTP 返回包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#REFERER"><span class="toc-number">1.2.</span> <span class="toc-text">REFERER</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">溯源思路</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E4%BB%A5%E6%BA%AF%E6%BA%90%E7%9A%84%E9%83%A8%E5%88%86"><span class="toc-number">2.1.</span> <span class="toc-text">可以溯源的部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E6%BA%AF%E5%85%B3%E9%94%AE%E7%82%B9"><span class="toc-number">2.2.</span> <span class="toc-text">回溯关键点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%92%93%E9%B1%BC%E9%82%AE%E4%BB%B6%E6%BA%AF%E6%BA%90%E6%96%B9%E5%BC%8F"><span class="toc-number">2.3.</span> <span class="toc-text">钓鱼邮件溯源方式</span></a></li></ol></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {code.findCode();
+document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>
